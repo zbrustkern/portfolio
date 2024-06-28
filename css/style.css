@@ -6,3 +6,13 @@ a {
     color: white;
     text-decoration: none;
 }
+
+.container {
+    margin-top: 5vh;
+}
+
+.card-img-top {
+        width: 100%;
+        aspect-ratio: 16 / 12;
+        object-fit: cover;
+}
