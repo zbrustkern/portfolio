@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto&display=swap');
+
+body {
+    background-color: #0a0a1f;
+    color: #ffffff;
+    font-family: 'Roboto', sans-serif;
+}
+
+.navbar {
+    background-color: rgba(10, 10, 31, 0.8);
+    border-bottom: 2px solid #00ffff;
+}
+
+.navbar-brand, .nav-link {
+    color: #00ffff !important;
+    font-family: 'Orbitron', sans-serif;
+    text-shadow: 0 0 10px #00ffff;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Orbitron', sans-serif;
+    color: #ff00ff;
+    text-shadow: 0 0 10px #ff00ff;
+}
+
+.card {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid #00ffff;
+    box-shadow: 0 0 15px #00ffff;
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 25px #00ffff;
+}
+
+.card-img-top {
+    border-bottom: 1px solid #00ffff;
+}
+
+.badge {
+    background-color: #ff00ff;
+    color: #ffffff;
+    font-family: 'Orbitron', sans-serif;
+    margin-right: 5px;
+}
+
+.btn-primary {
+    background-color: #00ffff;
+    border-color: #00ffff;
+    color: #0a0a1f;
+    font-family: 'Orbitron', sans-serif;
+    text-shadow: none;
+}
+
+.btn-primary:hover {
+    background-color: #ff00ff;
+    border-color: #ff00ff;
+    color: #ffffff;
+}
+
+#starfield {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
