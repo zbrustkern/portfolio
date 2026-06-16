@@ -4,239 +4,181 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="./assets/thumbnail.jpeg">
-    <link rel="stylesheet" href="css/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/style.css">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/styles.css">
     <script defer src="./js/app.js"></script>
-    <title>Zeke Brustkern</title>
+    <title>Zeke Brustkern | Director of Product</title>
 <!-- Open Graph meta data-->
-    <meta property="og:title" content="It's Not Zeke" />
+    <meta property="og:title" content="Zeke Brustkern - Director of Product" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://notZeke.com" />
     <meta property="og:image" content="assets/thumbnail.jpeg" />
-    <meta property="og:description" content="If they asked who, it's not Zeke." />
- 
+    <meta property="og:description" content="Director, Product Management for Data, AI, and Reporting." />
 </head>
-
-<header>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary opacity-75">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#"></a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div class="navbar-nav">
-              <a class="nav-link active" aria-current="page" href="#">Zeke</a>
-              <a class="nav-link" href="#tophat">Tophat Financial</a>
-              <a class="nav-link" href="#weatherwise">WeatherWise</a>
-              <a class="nav-link" href="#moar-square">MoarSquare</a>
-              <a class="nav-link" href="#wrench-collective">The Wrench Collective</a>
-              <a class="nav-link" href="#liftracker">Liftracker</a>
-              <a class="nav-link" href="#qubic">Qubic</a>
-              <a class="nav-link" href="#checkers">Checkers</a>
-              <a class="nav-link" href="#LPS">LPS</a>
-              <a class="nav-link" href="#chemfinder">ChemFinder</a>
-              <a class="nav-link" href="#contact">Contact</a>
-              <!-- <a class="nav-link disabled">Disabled</a> -->
-            </div>
-          </div>
-        </div>
-      </nav>
-</header>
-
 <body>
   <canvas id="starfield"></canvas>
-  <div class="container">
-    <div class="row row-cols-auto flex-wrap">
-      <div class="col-sm-12 col-md-4">
-          <div class="card text-bg-primary mb-3 mx-auto shadow" id="about me">
-            <img src="assets/postcard.png" class="card-img-top" alt="A dashingly handsome developer">
-            <div class="card-body">
-              <h5 class="card-title " >Zeke Brustkern</h5>
-              <p class="card-text">My name is Zeke Brustkern. I like building things- quantitative finance models, enterprise software, and consumer facing applications. Here are some personal projects with a variety of technologies.</p>
-              <div class="badges"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" alt="HTML Badge"></div>
-              <a href="https://github.com/zbrustkern" class="stretched-link"></a>
+  
+  <header>
+      <nav class="navbar navbar-expand-lg fixed-top">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="#">ZB</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+              <div class="navbar-nav ms-auto align-items-center">
+                <a class="nav-link" href="#featured">Executive Leadership</a>
+                <a class="nav-link" href="#sandbox">Playground</a>
+                <a class="nav-link" href="#contact">Contact</a>
+                <button id="theme-toggle" aria-label="Toggle Theme">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-moon-stars" viewBox="0 0 16 16">
+                    <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278zM4.858 1.311A7.269 7.269 0 0 0 1.025 7.71c0 4.02 3.279 7.276 7.319 7.276a7.316 7.316 0 0 0 5.205-2.162c-.337.042-.68.063-1.029.063-4.61 0-8.343-3.714-8.343-8.29 0-1.167.242-2.278.681-3.286z"/>
+                    <path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"/>
+                  </svg>
+                </button>
+              </div>
             </div>
           </div>
-      </div>
+        </nav>
+  </header>
 
-      <div class="col-sm-12 col-md-4">
-        <div class="card text-bg-primary mb-3 mx-auto shadow" id="tophat">
-            <img src="assets/tophat_financial.jpg" class="card-img-top" alt="Logo for Tophat Financial">
+  <main class="container">
+    <section class="hero-section">
+      <h1 class="hero-title">Zeke Brustkern</h1>
+      <p class="hero-subtitle">Director of Product Management for Data, AI, and Reporting.</p>
+      <p class="text-secondary" style="max-width: 600px; margin: 0 auto;">Bridging the gap between deeply technical engineering teams and high-level business strategy to design scalable, data-driven architectures that deliver real value.</p>
+    </section>
+
+    <section id="featured">
+      <h2 class="section-title">Executive Leadership: ABC Insights</h2>
+      <p class="text-secondary mb-4">Driving the strategic vision and technical execution for enterprise-scale data warehousing, AI enablement, and unified reporting platforms.</p>
+      
+      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+        
+        <!-- Dimensional Modeling -->
+        <div class="col">
+          <div class="card h-100">
+            <img src="assets/abc-dimensional.png" class="card-img-top" alt="Dimensional Modeling representation">
             <div class="card-body">
-                <h5 class="card-title">Tophat Financial</h5>
-                <p class="card-text">Work in progress. Build a financial plan for your future. Use the income calculator to estimate your future cash flow given your income, savings, and expected return.</p>
-                <div class="badges"><img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React Badge"> <img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white" alt="Typescript Badge"> <img src="https://img.shields.io/badge/Google_Cloud-4285F4?style=for-the-badge&logo=google-cloud&logoColor=white" alt="Google Cloud Badge"></div>
-                <a href="https://planner-cac2a.web.app/" class="stretched-link"></a>
+                <h5 class="card-title">Dimensional Data Modeling Overhaul</h5>
+                <p class="card-text">Led a complete ground-up restructuring of dimensional models based on Kimball first principles, ensuring 100% reliable, consistent, accurate, and timely data delivery across the enterprise.</p>
+                <div class="badges mt-auto">
+                  <span class="badge text-bg-secondary text-light bg-opacity-25 border border-secondary">Data Modeling</span>
+                  <span class="badge text-bg-secondary text-light bg-opacity-25 border border-secondary">Kimball</span>
+                </div>
+                <a href="https://ignite.abcfitness.com/gym-management-software/insights/" class="stretched-link" aria-label="View ABC Insights"></a>
             </div>
+          </div>
         </div>
-      </div>
 
-      <div class="col-sm-12 col-md-4">
-        <div class="card text-bg-primary mb-3 mx-auto shadow" id="weatherwise">
-          <img src="assets/weatherwise-screenshot.png" class="card-img-top" alt="A screenshot of disaster preparedness app">
-          <div class="card-body">
-              <h5 class="card-title">WeatherWise</h5>
-              <p class="card-text">Envirobuild 2024 Hackathon Winner, this app provides disaster preparedness information localized to the user with info, tips, and advice on what to do in case of geological emergencies.</p>
-              <div class="badges"><img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React Badge"> <img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white" alt="Typescript Badge"> <img src="https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white" alt="Nextjs Badge"></div>
-              <a href="https://water-wars-psi.vercel.app" class="stretched-link"></a>
-            </div>
-        </div>
-      </div>
-
-      <div class="col-sm-12 col-md-4">
-        <div class="card text-bg-primary mb-3 mx-auto shadow" id="moar-square">
-            <img src="assets/moarsquare-screenshot.png" class="card-img-top" alt="A screenshot of a social media checkin app">
+        <!-- Enterprise Governance -->
+        <div class="col">
+          <div class="card h-100">
+            <img src="https://abcfitness.com/wp-content/uploads/1200x600-v1-scaled.jpg" class="card-img-top" alt="Data Governance representation">
             <div class="card-body">
-                <h5 class="card-title">Moar Square</h5>
-                <p class="card-text">Why stop at Four? With Moar Square, you can check in, share your location with your friends, and comment on everyone's checkins while seeing their location on an interactive map.</p>
-                <div class="badges"><img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React Badge"> <img src="https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white" alt="Flask Badge"> <img src="https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white" alt="PostgreSQL Badge"></div>
-                <a href="https://moar-square.netlify.app/" class="stretched-link"></a>
+                <h5 class="card-title">Enterprise Scale Data Governance</h5>
+                <p class="card-text">Rethought data governance and stewardship to establish company-wide governed definitions of core KPIs. Powered high-quality reporting and enabled scalable AI tooling through harnessed metric views.</p>
+                <div class="badges mt-auto">
+                  <span class="badge text-bg-secondary text-light bg-opacity-25 border border-secondary">AI Enablement</span>
+                  <span class="badge text-bg-secondary text-light bg-opacity-25 border border-secondary">Governance</span>
+                </div>
+                <a href="https://abcfitness.com/webinars/ai-innovation/" class="stretched-link" aria-label="View AI Innovation Webinar"></a>
             </div>
+          </div>
         </div>
-      </div>
 
-      <div class="col-sm-12 col-md-4">
-        <div class="card text-bg-primary mb-3 mx-auto shadow" id="wrench-collective">
-            <img src="assets/wrench-collective-screenshot.png" class="card-img-top" alt="A screenshot of a car tracking app">
+        <!-- Cloud Modernization -->
+        <div class="col">
+          <div class="card h-100">
+            <img src="https://ignite.abcfitness.com/wp-content/uploads/2024/05/abc-ignite-featured.png" class="card-img-top" alt="Cloud Migration representation">
             <div class="card-body">
-                <h5 class="card-title">The Wrench Collective</h5>
-                <p class="card-text">The Wrench Collective is a community of car enthusiasts sharing details of their cars, their garages, and discussion thereof. This project was a group effort with <a href="https://github.com/Zecrim">@Zecrim</a> and <a href="https://github.com/cmonckton2626">@cmonckton2626</a>.</p>
-                <div class="badges"><img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React Badge"> <img src="https://img.shields.io/badge/Express.js-404D59?style=for-the-badge" alt="Express.js Badge"> <img src="https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white" alt="Mongo DB Badge"></div>
-                <a href="https://the-wrench-collective-b3c568642add.herokuapp.com/" class="stretched-link"></a>
+                <h5 class="card-title">Cloud Modernization Strategy</h5>
+                <p class="card-text">Spearheaded the transition from legacy technology platforms (IBM iSeries DB2, Oracle, MySQL) to modern cloud-native architectures (AWS Databricks), overcoming immense platform limitations.</p>
+                <div class="badges mt-auto">
+                  <span class="badge text-bg-secondary text-light bg-opacity-25 border border-secondary">AWS Databricks</span>
+                  <span class="badge text-bg-secondary text-light bg-opacity-25 border border-secondary">Migration</span>
+                </div>
+                <a href="https://ignite.abcfitness.com/" class="stretched-link" aria-label="View ABC Ignite"></a>
             </div>
+          </div>
         </div>
-       </div>
 
-      <div class="col-sm-12 col-md-4">
-        <div class="card text-bg-primary mb-3 mx-auto shadow" id="liftracker">
-            <img src="assets/liftracker-screenshot.png" class="card-img-top" alt="A barbell logo for LifTracker">
-            <div class="card-body">
-                <h5 class="card-title">LifTracker</h5>
-                <p class="card-text">LifTracker is an all-in-one solution for tracking your weightlifiting stats and designing workouts to improve them. Get fit with LifTracker.</p>
-                <div class="badges"><img src="https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white" alt="Node.js Badge"> <img src="https://img.shields.io/badge/Express.js-404D59?style=for-the-badge" alt="Express.js Badge"> <img src="https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white" alt="Mongo DB Badge"></div>
-                <a href="https://liftracker-68f4ba8f13b2.herokuapp.com/" class="stretched-link"></a>
-            </div>
-        </div>
       </div>
-      <div class="col-sm-12 col-md-4">
-        <div class="card text-bg-primary mb-3 mx-auto shadow" id="qubic">
-            <img src="assets/qubic-screenshot.png" class="card-img-top" alt="Synthwave three dimensional tic tac toe">
-            <div class="card-body">
-                <h5 class="card-title">Qubic</h5>
-                <p class="card-text">Qubic is a three dimensional version of tic tac toe. This game runs completely in the browser. Bonus points if you and a friend can reach a tie!</p>
-                <div class="badges"><img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML Badge"> <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS Badge"> <img src="https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E" alt="Javascript Badge"></div>
-                <a href="https://zbrustkern.github.io/qubic/" class="stretched-link"></a>
-            </div>
-        </div>
-      </div>
+    </section>
 
-      <div class="col-sm-12 col-md-4">
-        <div class="card text-bg-primary mb-3 mx-auto shadow" id="checkers">
-            <img src="assets/checkers-screenshot.png" class="card-img-top" alt="Black and red checkers board">
+    <section id="sandbox" class="mt-5 pt-4">
+      <h2 class="section-title">Technical Playground</h2>
+      <p class="text-secondary mb-4">I believe the best product leaders stay close to the metal. Here are some personal engineering projects and experiments I've built to explore new technologies.</p>
+      
+      <div class="row row-cols-1 row-cols-md-3 row-cols-lg-3 g-4">
+        <!-- Not Zeke Academy -->
+        <div class="col">
+          <div class="card shadow-sm h-100">
+            <img src="assets/nza-thumbnail.png" class="card-img-top" alt="Not Zeke Academy thumbnail">
             <div class="card-body">
-                <h5 class="card-title">Checkers</h5>
-                <p class="card-text">Checkers: classic board game. This version stays true to real life and doesn't prevent you from cheating!</p>
-                <div class="badges"><img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML Badge"> <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS Badge"> <img src="https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E" alt="Javascript Badge"></div>
-                <a href="https://zbrustkern.github.io/checkTwo/" class="stretched-link"></a>
+                <h5 class="card-title fs-6">not Zeke Academy</h5>
+                <p class="card-text small">A dynamic, AI-powered learning platform designed to help learners build and customize curricula for their unique needs with learner-aware reactive pedagogy.</p>
+                <div class="badges mt-auto">
+                  <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React Badge"> 
+                  <img src="https://img.shields.io/badge/Firebase-FFCA28?style=for-the-badge&logo=firebase&logoColor=black" alt="Firebase Badge">
+                </div>
+                <a href="https://github.com/zbrustkern/snipIt" class="stretched-link" aria-label="View Not Zeke Academy"></a>
             </div>
+          </div>
         </div>
-      </div>
 
-      <div class="col-sm-12 col-md-4">
-        <div class="card text-bg-primary mb-3 mx-auto shadow" id="LPS">
-            <img src="assets/LPS-screenshot.jpeg" class="card-img-top" alt="A Rock, scroll of papyrus, and a scalpel">
-            <div class="card-body">
-                <h5 class="card-title">Lapis, Papyrus, Scalpellus </h5>
-                <p class="card-text">Translated to English: Rock, Paper, Scissors! In this version you play against a randomizer.</p>
-                <div class="badges"><img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML Badge"> <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS Badge"> <img src="https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E" alt="Javascript Badge"></div>
-                <a href="https://zbrustkern.github.io/LPS/" class="stretched-link"></a>
-            </div>
-        </div>
-      </div>
-
-      <div class="col-sm-12 col-md-4">
-          <div class="card text-bg-primary mb-3 mx-auto shadow" id="chemfinder">
-            <img src="assets/chemfinder-screenshot.png" class="card-img-top" alt="Some Ruby Code describing controllers">
-            <div class="card-body">
-                <h5 class="card-title">ChemFinder (Ruby on Rails) </h5>
-                <p class="card-text">One of my first full stack projects, no longer actively maintained.</p>
-                <div class="badges"><img src="https://img.shields.io/badge/Ruby-CC342D?style=for-the-badge&logo=ruby&logoColor=white" alt="Ruby Badge"> <img src="https://img.shields.io/badge/Ruby_on_Rails-CC0000?style=for-the-badge&logo=ruby-on-rails&logoColor=white" alt="Ruby on Rails Badge"></div>
-                <a href="https://github.com/zbrustkern/chemfindertwo" class="stretched-link"></a>
-            </div>
-        </div>
-      </div>
-
-      <div class="col-sm-12 col-md-4">
-          <div class="card text-bg-primary mb-3 mx-auto shadow" id="contact">
-              <img src="assets/contact-me.jpeg" class="card-img-top" alt="">
+        <!-- Tophat Financial -->
+        <div class="col">
+          <div class="card shadow-sm h-100">
+              <img src="assets/tophat_financial.jpg" class="card-img-top" alt="Logo for Tophat Financial">
               <div class="card-body">
-                  <h5 class="card-title">Contact Me</h5>
-                  <p class="card-text">Want to get in touch? <a href="mailto:info@notzeke.com" class="stretched-link"></a></p>
+                  <h5 class="card-title fs-6">Tophat Financial</h5>
+                  <p class="card-text small">Build a financial plan for your future. Uses advanced modeling to estimate your future cash flow given your income, savings, and expected return.</p>
+                  <div class="badges mt-auto">
+                    <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React Badge"> 
+                    <img src="https://img.shields.io/badge/Google_Cloud-4285F4?style=for-the-badge&logo=google-cloud&logoColor=white" alt="Google Cloud Badge">
+                  </div>
+                  <a href="https://planner-cac2a.web.app/" class="stretched-link" aria-label="View Tophat Financial"></a>
               </div>
           </div>
-      </div>
+        </div>
 
-      <div class="col-sm-12 col-md-4">
-        <div class="card text-bg-primary mb-3 mx-auto shadow" id="contact">
-            <img src="assets/LinkedIn_logo_initials.png" class="card-img-top" alt="">
+        <!-- WeatherWise -->
+        <div class="col">
+          <div class="card shadow-sm h-100">
+            <img src="assets/weatherwise-screenshot.png" class="card-img-top" alt="A screenshot of disaster preparedness app">
             <div class="card-body">
-                <h5 class="card-title">LinkedIN</h5>
-                <p class="card-text">Professional Networking <a href="https://linkedin.com/in/zekebrustkern" class="stretched-link"></a>
+                <h5 class="card-title fs-6">WeatherWise</h5>
+                <p class="card-text small">Envirobuild 2024 Hackathon Winner. Provides disaster preparedness information localized to the user with actionable insights for geological emergencies.</p>
+                <div class="badges mt-auto">
+                  <img src="https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white" alt="Nextjs Badge">
+                </div>
+                <a href="https://water-wars-psi.vercel.app" class="stretched-link" aria-label="View WeatherWise"></a>
+              </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="mt-5 pt-5 border-top border-secondary">
+        <div class="row text-center mb-5">
+            <div class="col-md-6 mb-3">
+                <a href="mailto:info@notzeke.com" class="text-decoration-none">
+                    <h5 style="color: var(--accent-primary)">Contact Me</h5>
+                    <p class="text-secondary">info@notzeke.com</p>
+                </a>
+            </div>
+            <div class="col-md-6 mb-3">
+                <a href="https://linkedin.com/in/zekebrustkern" class="text-decoration-none">
+                    <h5 style="color: var(--accent-primary)">LinkedIn</h5>
+                    <p class="text-secondary">Professional Networking</p>
+                </a>
             </div>
         </div>
-    </div>
-      
-    </div>
-  </div>
+    </section>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-  <script>
-      // Starfield animation
-      const canvas = document.getElementById('starfield');
-      const ctx = canvas.getContext('2d');
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
+  </main>
 
-      const stars = [];
-      for (let i = 0; i < 100; i++) {
-          stars.push({
-              x: Math.random() * canvas.width,
-              y: Math.random() * canvas.height,
-              radius: Math.random() * 1.5,
-              vx: Math.floor(Math.random() * 50) - 25,
-              vy: Math.floor(Math.random() * 50) - 25
-          });
-      }
-
-      function draw() {
-          ctx.clearRect(0, 0, canvas.width, canvas.height);
-          ctx.globalCompositeOperation = "lighter";
-
-          for (let i = 0, x = stars.length; i < x; i++) {
-              const s = stars[i];
-
-              ctx.fillStyle = "#00ffff";
-              ctx.beginPath();
-              ctx.arc(s.x, s.y, s.radius, 0, 2 * Math.PI);
-              ctx.fill();
-
-              s.x += s.vx / 30;
-              s.y += s.vy / 30;
-
-              if (s.x < 0 || s.x > canvas.width) s.vx = -s.vx;
-              if (s.y < 0 || s.y > canvas.height) s.vy = -s.vy;
-          }
-      }
-
-      function animate() {
-          draw();
-          requestAnimationFrame(animate);
-      }
-
-      animate();
-  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>
