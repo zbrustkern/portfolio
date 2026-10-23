@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="description" content="A playful archive of Zeke Brustkern's earlier product and software experiments.">
+  <meta property="og:title" content="A Few Side Quests | Zeke Brustkern">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://notzeke.com/test/fun.html">
+  <meta property="og:image" content="https://notzeke.com/test/assets/thumbnail.jpeg">
+  <meta property="og:description" content="Nine earlier product and software experiments, kept together for the ideas and the fun.">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://notzeke.com/test/fun.html">
+  <link rel="icon" type="image/svg+xml" href="./assets/portfolio-refresh/favicon.svg">
+  <link rel="icon" type="image/x-icon" href="./favicon.ico">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/styles.css">
+  <script defer src="./js/app.js"></script>
+  <title>A Few Side Quests | Zeke Brustkern</title>
+</head>
+<body>
+  <canvas id="starfield" aria-hidden="true"></canvas>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
+  <header class="site-header">
+    <nav class="navbar navbar-expand-lg fixed-top" aria-label="Primary navigation">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="./index.html">Zeke Brustkern</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#siteNavigation" aria-controls="siteNavigation" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="siteNavigation">
+          <div class="navbar-nav ms-auto align-items-lg-center">
+            <a class="nav-link" href="./index.html#leadership">Leadership</a>
+            <a class="nav-link" href="./index.html#ventures">Ventures</a>
+            <a class="nav-link" href="#archive">The archive</a>
+            <a class="nav-link" href="#contact">Contact</a>
+            <button id="theme-toggle" type="button" aria-label="Toggle color theme" aria-pressed="false">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true" focusable="false">
+                <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278zM4.858 1.311A7.269 7.269 0 0 0 1.025 7.71c0 4.02 3.279 7.276 7.319 7.276a7.316 7.316 0 0 0 5.205-2.162c-.337.042-.68.063-1.029.063-4.61 0-8.343-3.714-8.343-8.29 0-1.167.242-2.278.681-3.286z"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main-content" class="container">
+    <section class="hero-section" aria-labelledby="page-title">
+      <p class="hero-kicker">Past builds · curious detours · small games</p>
+      <h1 id="page-title" class="hero-title">A few side quests</h1>
+      <p class="hero-subtitle">An archive of projects from different seasons of making.</p>
+      <p class="hero-copy">These cards keep the ideas and experiments in view. They are historical snapshots; old demo links are not presented as active products.</p>
+      <a class="btn btn-primary" href="./index.html#experiments">Back to selected work</a>
+    </section>
+
+    <section id="archive" aria-labelledby="archive-title">
+      <p class="eyebrow">Nine older projects</p>
+      <h2 id="archive-title" class="section-title">The playground</h2>
+      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+        <div class="col">
+          <article id="tophat" class="card h-100">
+            <img src="assets/tophat_financial.jpg" class="card-img-top" alt="Tophat Financial project mark" loading="lazy">
+            <div class="card-body">
+              <p class="project-status">Past prototype</p>
+              <h3 class="card-title">Tophat Financial</h3>
+              <p class="card-text">A planning prototype for exploring how income, savings and return assumptions can change long-term cash flow. An early modeling exercise, not financial advice.</p>
+            </div>
+          </article>
+        </div>
+        <div class="col">
+          <article id="WeatherWise" class="card h-100">
+            <img src="assets/weatherwise-screenshot.png" class="card-img-top" alt="WeatherWise mock dashboard with fictional sample readings and a playful Alien Activity panel" loading="lazy">
+            <div class="card-body">
+              <p class="project-status">Hackathon concept · Fictional mock data</p>
+              <h3 class="card-title">WeatherWise</h3>
+              <p class="card-text">A local disaster-preparedness concept exploring how location-aware information could help people think through geological emergencies. The pictured readings are fictional mock data, including the intentionally playful Alien Activity panel; this is not a live weather or alert feed.</p>
+            </div>
+          </article>
+        </div>
+        <div class="col">
+          <article id="moar-square" class="card h-100">
+            <img src="assets/moarsquare-screenshot.png" class="card-img-top" alt="Moar Square social check-in project screen" loading="lazy">
+            <div class="card-body">
+              <p class="project-status">Past prototype</p>
+              <h3 class="card-title">Moar Square</h3>
+              <p class="card-text">A social check-in idea built around sharing a location with friends, leaving updates and seeing activity on a map.</p>
+            </div>
+          </article>
+        </div>
+        <div class="col">
+          <article id="wrench-collective" class="card h-100">
+            <img src="assets/wrench-collective-screenshot.png" class="card-img-top" alt="The Wrench Collective car community project screen" loading="lazy">
+            <div class="card-body">
+              <p class="project-status">Group project</p>
+              <h3 class="card-title">The Wrench Collective</h3>
+              <p class="card-text">A group-built community concept for car enthusiasts to share their vehicles, garages and conversations about them.</p>
+            </div>
+          </article>
+        </div>
+        <div class="col">
+          <article id="liftracker" class="card h-100">
+            <img src="assets/liftracker-screenshot.png" class="card-img-top" alt="LifTracker weightlifting project mark" loading="lazy">
+            <div class="card-body">
+              <p class="project-status">Archived prototype</p>
+              <h3 class="card-title">LifTracker</h3>
+              <p class="card-text">An early workout-planning and lifting-stat tracker. This project is no longer actively maintained.</p>
+            </div>
+          </article>
+        </div>
+        <div class="col">
+          <article id="qubic" class="card h-100">
+            <img src="assets/qubic-screenshot.png" class="card-img-top" alt="Synthwave illustration of a three-dimensional tic-tac-toe board" loading="lazy">
+            <div class="card-body">
+              <p class="project-status">Browser game experiment</p>
+              <h3 class="card-title">Qubic</h3>
+              <p class="card-text">A browser-based experiment in three-dimensional tic-tac-toe. Bonus points if you and a friend manage a tie.</p>
+            </div>
+          </article>
+        </div>
+        <div class="col">
+          <article id="checkers" class="card h-100">
+            <img src="assets/checkers-screenshot.png" class="card-img-top" alt="A red and black checkers board" loading="lazy">
+            <div class="card-body">
+              <p class="project-status">Browser game experiment</p>
+              <h3 class="card-title">Checkers</h3>
+              <p class="card-text">A simple take on the classic board game that leaves it up to the players to decide whether to follow the rules.</p>
+            </div>
+          </article>
+        </div>
+        <div class="col">
+          <article id="LPS" class="card h-100">
+            <img src="assets/LPS-screenshot.jpeg" class="card-img-top" alt="Rock, papyrus and scalpel illustrations for a game" loading="lazy">
+            <div class="card-body">
+              <p class="project-status">Browser game experiment</p>
+              <h3 class="card-title">Lapis, Papyrus, Scalpellus</h3>
+              <p class="card-text">Rock, paper, scissors with an old-world title and a randomizer on the other side.</p>
+            </div>
+          </article>
+        </div>
+        <div class="col">
+          <article id="chemfinder" class="card h-100">
+            <img src="assets/chemfinder-screenshot.png" class="card-img-top" alt="Ruby code from the ChemFinder project" loading="lazy">
+            <div class="card-body">
+              <p class="project-status">Archived · no longer maintained</p>
+              <h3 class="card-title">ChemFinder</h3>
+              <p class="card-text">One of my first full-stack experiments, built with Ruby on Rails.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="mt-5 pt-5 border-top border-secondary" aria-labelledby="contact-title">
+      <p class="eyebrow">The person behind the projects</p>
+      <h2 id="contact-title" class="section-title">Say hello</h2>
+      <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="col">
+          <article id="zeke" class="card h-100">
+            <img src="assets/postcard.png" class="card-img-top" alt="A playful postcard illustration" loading="lazy">
+            <div class="card-body">
+              <p class="project-status">Builder, product leader, side-quest enthusiast</p>
+              <h3 class="card-title">Zeke Brustkern</h3>
+              <p class="card-text">I like making things: thoughtful products, useful data tools and the occasional browser game.</p>
+              <div class="project-links"><a href="./index.html">Back to the main portfolio <span aria-hidden="true">→</span></a></div>
+            </div>
+          </article>
+        </div>
+        <div class="col">
+          <article class="card h-100">
+            <img src="assets/contact-me.jpeg" class="card-img-top" alt="Contact illustration" loading="lazy">
+            <div class="card-body">
+              <p class="project-status">Contact</p>
+              <h3 class="card-title">Have a useful question?</h3>
+              <p class="card-text">I’m always glad to talk about product, data, AI and how teams get good work out the door.</p>
+              <div class="project-links"><a href="mailto:info@notzeke.com">Email Zeke <span aria-hidden="true">→</span></a></div>
+            </div>
+          </article>
+        </div>
+        <div class="col">
+          <article id="linkedin" class="card h-100">
+            <img src="assets/LinkedIn_logo_initials.png" class="card-img-top" alt="LinkedIn logo" loading="lazy">
+            <div class="card-body">
+              <p class="project-status">Professional profile</p>
+              <h3 class="card-title">LinkedIn</h3>
+              <p class="card-text">Connect or continue the conversation.</p>
+              <div class="project-links"><a href="https://linkedin.com/in/zekebrustkern" target="_blank" rel="noopener noreferrer">Visit LinkedIn <span aria-hidden="true">↗</span></a></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer container">
+    <p>© Zeke Brustkern · A small archive of past experiments.</p>
+    <a href="./index.html">Return to the portfolio</a>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-labelledby="title description">
+  <title id="title">DocketStamp letter preparation illustration</title>
+  <desc id="description">A document preview, human review mark, and outgoing envelope illustrate preparing and mailing a letter.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#172338"/>
+      <stop offset="1" stop-color="#0c1423"/>
+    </linearGradient>
+    <linearGradient id="paper" x1="0" y1="0" x2="0.9" y2="1">
+      <stop offset="0" stop-color="#fffaf0"/>
+      <stop offset="1" stop-color="#e9eff0"/>
+    </linearGradient>
+    <filter id="shadow" x="-30%" y="-30%" width="170%" height="180%">
+      <feDropShadow dx="0" dy="22" stdDeviation="24" flood-color="#050a12" flood-opacity=".4"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="675" rx="34" fill="url(#bg)"/>
+  <circle cx="1015" cy="96" r="208" fill="#ff8255" opacity=".12"/>
+  <circle cx="140" cy="603" r="225" fill="#42d7e8" opacity=".11"/>
+  <path d="M0 503c246-71 353 32 516 56 219 32 386-27 684-111v227H0z" fill="#101a2b" opacity=".8"/>
+  <g opacity=".62" fill="none" stroke="#44d7e6" stroke-width="2">
+    <path d="M851 112h203a18 18 0 0 1 18 18v34"/>
+    <path d="M861 141h156" stroke-dasharray="5 9"/>
+    <circle cx="1071" cy="192" r="6" fill="#ff9465" stroke="none"/>
+    <circle cx="879" cy="171" r="4" fill="#ff9465" stroke="none"/>
+  </g>
+  <g filter="url(#shadow)" transform="rotate(-5 594 337)">
+    <rect x="376" y="76" width="354" height="468" rx="18" fill="#223348" opacity=".8"/>
+    <rect x="350" y="96" width="354" height="468" rx="18" fill="url(#paper)"/>
+    <rect x="383" y="128" width="118" height="28" rx="14" fill="#d9eff0"/>
+    <text x="397" y="147" fill="#155864" font-family="Arial,sans-serif" font-size="11" font-weight="700" letter-spacing="1.1">LETTER PREVIEW</text>
+    <path d="M386 188h226" stroke="#d0dadd" stroke-width="2"/>
+    <text x="386" y="225" fill="#172b3e" font-family="Georgia,serif" font-size="23" font-weight="700">A letter, ready</text>
+    <text x="386" y="256" fill="#172b3e" font-family="Georgia,serif" font-size="23" font-weight="700">for your review.</text>
+    <path d="M386 288h270M386 315h270M386 342h242M386 390h270M386 417h244M386 444h258" stroke="#bdcbd0" stroke-width="4" stroke-linecap="round"/>
+    <path d="M386 496h98" stroke="#f17d54" stroke-width="4" stroke-linecap="round"/>
+  </g>
+  <g filter="url(#shadow)" transform="rotate(7 768 438)">
+    <rect x="695" y="322" width="353" height="223" rx="20" fill="#42d7e8"/>
+    <path d="M708 340l163 128 164-128" fill="none" stroke="#0d6673" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" opacity=".76"/>
+    <path d="M699 528l127-102M1044 528 919 426" fill="none" stroke="#c6f6f2" stroke-width="4" opacity=".9"/>
+    <rect x="946" y="355" width="76" height="55" rx="6" fill="#fff4df"/>
+    <path d="M960 373h48M960 385h34M960 397h40" stroke="#df8057" stroke-width="3" stroke-linecap="round"/>
+  </g>
+  <g>
+    <rect x="83" y="78" width="201" height="42" rx="21" fill="#20344a" stroke="#385267"/>
+    <circle cx="106" cy="99" r="5" fill="#ff8255"/>
+    <text x="123" y="105" fill="#d1deea" font-family="Arial,sans-serif" font-size="14" font-weight="700" letter-spacing="2.5">DOCKETSTAMP</text>
+    <text x="83" y="177" fill="#f5f4ed" font-family="Arial,sans-serif" font-size="36" font-weight="700">Prepare with</text>
+    <text x="83" y="221" fill="#f5f4ed" font-family="Arial,sans-serif" font-size="36" font-weight="700">a clear next step.</text>
+    <text x="83" y="264" fill="#aebfd0" font-family="Arial,sans-serif" font-size="17">Review. Sign. Send.</text>
+    <path d="M83 296h154" stroke="#42d7e8" stroke-width="4" stroke-linecap="round"/>
+  </g>
+  <g>
+    <rect x="80" y="534" width="231" height="48" rx="24" fill="#19283a" stroke="#344c60"/>
+    <circle cx="105" cy="558" r="6" fill="#ff9064"/>
+    <text x="123" y="564" fill="#dce6eb" font-family="Arial,sans-serif" font-size="13" font-weight="700" letter-spacing="1.8">HUMAN REVIEW</text>
+  </g>
+  <g fill="#e1edf2" opacity=".75">
+    <circle cx="1071" cy="483" r="3"/><circle cx="1090" cy="533" r="2"/><circle cx="1037" cy="586" r="2"/>
+    <circle cx="293" cy="417" r="2"/><circle cx="263" cy="457" r="3"/><circle cx="300" cy="486" r="2"/>
+  </g>
+</svg>

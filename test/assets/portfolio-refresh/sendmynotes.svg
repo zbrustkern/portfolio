@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-labelledby="title description">
+  <title id="title">SendMyNotes illustrated greeting card</title>
+  <desc id="description">An illustrated handwritten note and envelope in warm orange, cream, and cyan.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#17253a"/>
+      <stop offset="1" stop-color="#0b1221"/>
+    </linearGradient>
+    <linearGradient id="envelope" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffb27d"/>
+      <stop offset="1" stop-color="#f2774d"/>
+    </linearGradient>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="180%">
+      <feDropShadow dx="0" dy="22" stdDeviation="24" flood-color="#050a12" flood-opacity=".38"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="675" rx="34" fill="url(#bg)"/>
+  <circle cx="1000" cy="95" r="190" fill="#42d7e8" opacity=".12"/>
+  <circle cx="174" cy="605" r="240" fill="#ff8255" opacity=".12"/>
+  <path d="M0 492c182-86 309-61 462 37 164 105 338 112 738 4v142H0z" fill="#111b2d" opacity=".78"/>
+  <g opacity=".6" fill="none" stroke="#5be0e9" stroke-width="2">
+    <path d="M892 174c49-66 144-83 208-39"/>
+    <path d="M914 204c46-49 118-60 168-29"/>
+    <circle cx="935" cy="116" r="4" fill="#ff9a66" stroke="none"/>
+    <circle cx="1065" cy="197" r="4" fill="#ff9a66" stroke="none"/>
+  </g>
+  <g filter="url(#shadow)" transform="rotate(-7 586 332)">
+    <rect x="335" y="88" width="442" height="420" rx="22" fill="#f9f2e6"/>
+    <path d="M383 159h220" stroke="#c6d2d4" stroke-width="3" stroke-linecap="round"/>
+    <text x="383" y="211" fill="#1a2d40" font-family="Georgia,serif" font-size="29" font-style="italic">A little hello,</text>
+    <text x="383" y="252" fill="#1a2d40" font-family="Georgia,serif" font-size="29" font-style="italic">just because.</text>
+    <path d="M386 294c43 17 95-19 137-1 39 17 68 11 115-4" fill="none" stroke="#73aeb4" stroke-width="2.5" stroke-linecap="round"/>
+    <path d="M383 341h279M383 369h222" stroke="#d5ddda" stroke-width="2" stroke-linecap="round"/>
+    <path d="M685 115l8 19 21 2-16 13 5 20-18-11-18 11 5-20-16-13 21-2z" fill="#ff8255"/>
+  </g>
+  <g filter="url(#shadow)" transform="rotate(5 630 438)">
+    <rect x="420" y="332" width="468" height="248" rx="22" fill="url(#envelope)"/>
+    <path d="M435 355l219 162 219-162" fill="none" stroke="#d95e3b" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" opacity=".72"/>
+    <path d="M422 562l169-129M887 562 718 433" fill="none" stroke="#ffd0aa" stroke-width="4" opacity=".8"/>
+    <path d="M654 461c-30-24-54-2-39 20 11 16 39 33 39 33s28-17 39-33c15-22-9-44-39-20z" fill="#fff3df"/>
+  </g>
+  <g>
+    <rect x="84" y="78" width="225" height="42" rx="21" fill="#20344b" stroke="#385267"/>
+    <circle cx="107" cy="99" r="5" fill="#42d7e8"/>
+    <text x="124" y="105" fill="#c8d8e5" font-family="Arial,sans-serif" font-size="14" font-weight="700" letter-spacing="2.5">SENDMYNOTES</text>
+    <text x="84" y="177" fill="#f5f4ed" font-family="Arial,sans-serif" font-size="36" font-weight="700">Good words,</text>
+    <text x="84" y="221" fill="#f5f4ed" font-family="Arial,sans-serif" font-size="36" font-weight="700">sent by hand.</text>
+    <text x="84" y="264" fill="#aebfd0" font-family="Arial,sans-serif" font-size="17">A real note in a real mailbox.</text>
+    <path d="M84 296h154" stroke="#ff8255" stroke-width="4" stroke-linecap="round"/>
+  </g>
+  <g fill="#e2edf2" opacity=".8">
+    <circle cx="1045" cy="517" r="3"/><circle cx="1082" cy="483" r="2"/><circle cx="1000" cy="565" r="2"/>
+    <circle cx="292" cy="464" r="2"/><circle cx="258" cy="505" r="3"/><circle cx="308" cy="549" r="2"/>
+  </g>
+</svg>

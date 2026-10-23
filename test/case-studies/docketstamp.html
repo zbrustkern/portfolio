@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="description" content="How Zeke Brustkern is building DocketStamp as a deterministic self-help letter preparation and postal dispatch product with explicit human review.">
+  <meta property="og:title" content="DocketStamp | Zeke Brustkern">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://notzeke.com/test/case-studies/docketstamp.html">
+  <meta property="og:image" content="https://notzeke.com/test/assets/thumbnail.jpeg">
+  <meta property="og:description" content="A self-help document preparation and postal dispatch product, built with clear boundaries and human review.">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://notzeke.com/test/case-studies/docketstamp.html">
+  <link rel="icon" type="image/svg+xml" href="../assets/portfolio-refresh/favicon.svg">
+  <link rel="icon" type="image/x-icon" href="../favicon.ico">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="../css/styles.css">
+  <script defer src="../js/app.js"></script>
+  <title>DocketStamp | Zeke Brustkern</title>
+</head>
+<body>
+  <canvas id="starfield" aria-hidden="true"></canvas>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
+  <header class="site-header">
+    <nav class="navbar navbar-expand-lg fixed-top" aria-label="Primary navigation">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="../index.html">Zeke Brustkern</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#siteNavigation" aria-controls="siteNavigation" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="siteNavigation">
+          <div class="navbar-nav ms-auto align-items-lg-center">
+            <a class="nav-link" href="../index.html#leadership">Leadership</a>
+            <a class="nav-link" href="../index.html#ventures">Ventures</a>
+            <a class="nav-link" href="../index.html#approach">How I build</a>
+            <a class="nav-link" href="../fun.html">Experiments</a>
+            <a class="nav-link" href="../index.html#contact">Contact</a>
+            <button id="theme-toggle" type="button" aria-label="Toggle color theme" aria-pressed="false">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true" focusable="false">
+                <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278zM4.858 1.311A7.269 7.269 0 0 0 1.025 7.71c0 4.02 3.279 7.276 7.319 7.276a7.316 7.316 0 0 0 5.205-2.162c-.337.042-.68.063-1.029.063-4.61 0-8.343-3.714-8.343-8.29 0-1.167.242-2.278.681-3.286z"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main-content" class="container case-study">
+    <section class="hero-section case-study-intro" aria-labelledby="page-title">
+      <p class="eyebrow">Case study · Personal venture</p>
+      <h1 id="page-title" class="hero-title">DocketStamp</h1>
+      <p class="hero-subtitle">Self-help letter preparation and postal dispatch, with clear human review.</p>
+      <p class="hero-copy">DocketStamp is designed to help people prepare administrative notices in a more structured way and send them by mail. It is not a law firm and does not provide legal advice.</p>
+      <p class="project-status">Technical production releases documented · Paid launch and live fulfillment acceptance not established</p>
+      <div class="project-links">
+        <a href="../index.html#ventures">Back to selected ventures</a>
+        <a href="sendmynotes.html">Read the SendMyNotes case study <span aria-hidden="true">→</span></a>
+      </div>
+      <figure class="case-study-figure">
+        <img src="../assets/portfolio-refresh/docketstamp.svg" alt="Abstract illustration for the DocketStamp document and mailing experience" width="1200" height="675">
+      </figure>
+    </section>
+
+    <section class="case-study-section" aria-labelledby="problem-title">
+      <p class="eyebrow">01 · The problem</p>
+      <h2 id="problem-title" class="section-title">Turn a multi-step mail task into a clear sequence.</h2>
+      <p>Preparing an administrative letter can ask people to gather the right details, fit them into a document, check the result, print it and work out how to mail it. DocketStamp explores a more guided preparation and dispatch path while leaving the legal judgment and final sign-off with the person sending the letter.</p>
+    </section>
+
+    <section class="case-study-section" aria-labelledby="decisions-title">
+      <p class="eyebrow">02 · Product decisions</p>
+      <h2 id="decisions-title" class="section-title">Make the boundaries part of the product.</h2>
+      <ul>
+        <li><strong>Keep letter prose deterministic.</strong> The product fills templates from explicit user-provided details.</li>
+        <li><strong>Put the person at the handoff.</strong> The user reviews the document and signs it before payment and any dispatch decision.</li>
+        <li><strong>Freeze the reviewed version.</strong> The document snapshot is fixed before payment so later edits cannot silently change what was approved for mailing.</li>
+        <li><strong>Check both views.</strong> The interactive preview and print rendering use the same interpolation logic, with template availability and geography treated as explicit product rules.</li>
+      </ul>
+    </section>
+
+    <section class="case-study-section" aria-labelledby="role-title">
+      <p class="eyebrow">03 · My role</p>
+      <h2 id="role-title" class="section-title">Shape the promise and the operating boundaries.</h2>
+      <p>I define the product intent and the limits of what the experience can responsibly promise. I work across product design, software, template governance and operational readiness, then coordinate implementation and review across agent-assisted work.</p>
+    </section>
+
+    <section class="case-study-section" aria-labelledby="delivery-title">
+      <p class="eyebrow">04 · Delivery approach</p>
+      <h2 id="delivery-title" class="section-title">Separate lanes, shared contracts, checks on the real handoff.</h2>
+      <p>I give agents bounded tasks with clear ownership—for example, backend behavior, interface work, assets, metadata or independent critique. The lanes share fixed contracts; I integrate the changes and verify the result across the user-facing and hosted experience.</p>
+      <ol class="process-steps">
+        <li><strong>Template controls:</strong> backend and interface work were implemented in separate lanes, then integrated against a shared contract and independently reviewed with browser checks.</li>
+        <li><strong>Share previews:</strong> an initial staging check found that page metadata appeared while public image assets were missing. The packaging path was repaired, then fetched assets and rendered pages were checked on staging and production.</li>
+        <li><strong>Product boundary:</strong> the engineering agents help build and inspect the software. The customer-facing letter remains deterministic, and the person reviews and signs it.</li>
+      </ol>
+    </section>
+
+    <section class="case-study-section" aria-labelledby="evidence-title">
+      <p class="eyebrow">05 · Current evidence</p>
+      <h2 id="evidence-title" class="section-title">Software deployment is not paid-launch validation.</h2>
+      <p>Technical production releases are documented, including template-availability controls and the public share-preview system. Those releases show software deployment and hosted checks; they do not establish paid-launch acceptance or live fulfillment.</p>
+    </section>
+
+    <section class="case-study-section" aria-labelledby="lesson-title">
+      <p class="eyebrow">06 · Lesson and next question</p>
+      <h2 id="lesson-title" class="section-title">Every handoff needs its own evidence.</h2>
+      <p>A working preview does not prove that a mailed document will be handled as intended, and a production deployment does not prove product-market fit. The next question is whether people can complete the preparation and mailing path with enough clarity and confidence—and whether the operational path can support that promise.</p>
+    </section>
+
+    <nav class="case-study-nav" aria-label="Case study navigation">
+      <a href="../index.html#ventures">All selected ventures</a>
+      <a href="sendmynotes.html">Next: SendMyNotes <span aria-hidden="true">→</span></a>
+    </nav>
+  </main>
+
+  <footer class="site-footer container">
+    <p>© Zeke Brustkern</p>
+    <a href="../index.html#contact">Contact</a>
+    <a href="../index.html">Home</a>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
