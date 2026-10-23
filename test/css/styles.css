@@ -758,6 +758,13 @@ section > .text-secondary,
   }
 }
 
+@media (min-width: 576px) and (max-width: 991.98px) {
+  .hero-section::before {
+    right: 0;
+    width: clamp(10rem, 22vw, 15rem);
+  }
+}
+
 @media (max-width: 767.98px) {
   .featured-abc-card {
     grid-template-columns: minmax(0, 1fr);
