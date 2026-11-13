@@ -3,26 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="color-scheme" content="light dark">
-  <script>
-    try {
-      const savedScheme = localStorage.getItem('color-scheme');
-      if (savedScheme === 'light' || savedScheme === 'dark') {
-        document.querySelector('meta[name="color-scheme"]').content = savedScheme;
-      }
-    } catch {}
-  </script>
+  <meta name="color-scheme" content="dark">
   <link rel="icon" type="image/x-icon" href="./assets/thumbnail.jpeg">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <link rel="stylesheet" href="css/styles.css">
   <script defer src="./js/app.js"></script>
-  <title>Zeke Brustkern | Product, Data &amp; AI Transformation Leadership</title>
-  <meta name="description" content="Director of Product Management for Data, AI, and Reporting. Leading agentic software development transformation and building real products end to end.">
-  <meta property="og:title" content="Zeke Brustkern | Product, Data &amp; AI Transformation">
+  <title>Zeke Brustkern | Director of Product — Data, AI &amp; Builder</title>
+  <meta name="description" content="Zeke Brustkern is Director of Product Management for Data, AI, and Reporting at ABC Fitness—leading agentic software development transformation and building real internet products.">
+  <meta property="og:title" content="Zeke Brustkern | Product, Data &amp; AI Leadership">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://notZeke.com">
   <meta property="og:image" content="assets/postcard.png">
-  <meta property="og:description" content="Director of Product Management for Data, AI, and Reporting — leading agentic software development transformation and building real products.">
+  <meta property="og:description" content="Director of Product Management for Data, AI, and Reporting at ABC Fitness. Leading agentic transformation and building products on the web.">
 </head>
 <body>
   <canvas id="starfield" aria-hidden="true"></canvas>
@@ -31,7 +23,7 @@
     <a href="#main-content" class="skip-link visually-hidden">Skip to main content</a>
     <nav class="navbar navbar-expand-lg fixed-top" aria-label="Primary">
       <div class="container-fluid px-lg-4">
-        <a class="navbar-brand" href="#">ZB // NOT ZEKE</a>
+        <a class="navbar-brand" href="#">Zeke<span>.</span></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon">
             <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
@@ -43,27 +35,10 @@
           <div class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
             <a class="nav-link" href="#leadership">ABC Insights</a>
             <a class="nav-link" href="#transformation">Agentic AI</a>
-            <a class="nav-link" href="#ventures">Ventures</a>
-            <a class="nav-link" href="#sandbox">Playground</a>
+            <a class="nav-link" href="#ventures">Businesses</a>
+            <a class="nav-link" href="#sandbox">Projects</a>
             <a class="nav-link" href="fun.html">/fun</a>
             <a class="nav-link" href="#contact">Contact</a>
-            <div class="nav-controls mt-2 mt-lg-0 ms-lg-2">
-              <button id="motion-toggle" class="icon-toggle" type="button" aria-label="Pause starfield animation">Pause Stars</button>
-              <button id="theme-toggle" class="icon-toggle" type="button">
-                <span class="theme-state-for-dark">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
-                    <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8M8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0m0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13m8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5M3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8m10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0m-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0m9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707M4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708"/>
-                  </svg>
-                  <span>Light<span class="visually-hidden"> theme</span></span>
-                </span>
-                <span class="theme-state-for-light">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
-                    <path d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277q.792-.001 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278"/>
-                  </svg>
-                  <span>Dark<span class="visually-hidden"> theme</span></span>
-                </span>
-              </button>
-            </div>
           </div>
         </div>
       </div>
@@ -75,30 +50,21 @@
     <section class="hero-section">
       <div class="row align-items-center g-4 g-lg-5">
         <div class="col-lg-7">
-          <span class="eyebrow">Director of Product · Data, AI &amp; Builder</span>
-          <h1 class="hero-title">Zeke Brustkern<span class="hero-accent">.</span></h1>
+          <span class="hero-role">Director of Product Management · Data, AI &amp; Reporting</span>
+          <h1 class="hero-title">Zeke Brustkern<span class="hero-dot">.</span></h1>
           <p class="hero-subtitle">
-            Serious about enterprise data architecture, governance, and leading agentic software development transformation. Playful enough to build and ship real products on the side because the best product leaders stay close to the metal.
+            I lead data, reporting, and AI product strategy at ABC Fitness—rebuilding legacy pipelines into governed analytics and helping engineering teams adopt agentic workflows. After hours, I launch small internet businesses, financial models, and browser games.
           </p>
-          <ul class="proof-chips">
-            <li class="proof-chip"><strong>ABC Fitness</strong> · Director of Product (Data, AI &amp; Reporting)</li>
-            <li class="proof-chip"><strong>Diffusion.io</strong> · Agentic Bootcamp &amp; Internal Enablement</li>
-            <li class="proof-chip"><strong>Solopreneur</strong> · DocketStamp &amp; SendMyNotes</li>
-          </ul>
           <div class="hero-actions">
-            <a href="#leadership" class="btn-signal">Explore Leadership &amp; Builds</a>
-            <a href="#ventures" class="btn-outline-cyan">See Shipped Ventures</a>
-            <a href="#contact" class="btn-outline-cyan">Get in Touch</a>
+            <a href="#leadership" class="btn-cosmic-primary">See the work</a>
+            <a href="#ventures" class="btn-cosmic-secondary">Businesses I've built</a>
+            <a href="#contact" class="btn-cosmic-secondary">Say hello</a>
           </div>
         </div>
         <div class="col-lg-5">
-          <figure class="hero-frame mb-0">
-            <img src="assets/postcard.png" alt="Retro space postcard illustration reading Not Zeke with a rocket launching through deep space">
-            <figcaption class="hero-frame-caption">
-              <span>Enterprise Strategist &amp; Hands-On Builder</span>
-              <span>notZeke.com</span>
-            </figcaption>
-          </figure>
+          <div class="hero-postcard">
+            <img src="assets/postcard.png" alt="Retro space postcard reading Not Zeke with a rocket launching into deep space">
+          </div>
         </div>
       </div>
     </section>
@@ -106,9 +72,9 @@
     <!-- Enterprise Leadership -->
     <section id="leadership" aria-labelledby="leadership-heading">
       <div id="featured" class="section-header">
-        <span class="section-kicker">Enterprise Product Leadership</span>
-        <h2 id="leadership-heading" class="section-title">ABC Fitness · ABC Ignite Insights</h2>
-        <p class="section-lead">Driving product vision, architecture alignment, and team execution for enterprise-scale data warehousing, governed BI, and AI enablement.</p>
+        <span class="section-kicker">ABC Fitness</span>
+        <h2 id="leadership-heading" class="section-title">ABC Ignite Insights</h2>
+        <p class="section-lead">Owning product strategy and delivery across enterprise data warehousing, governed BI, and AI-ready reporting platforms.</p>
       </div>
 
       <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
@@ -116,15 +82,13 @@
           <article class="card">
             <img src="assets/abc-dimensional.png" class="card-img-top" alt="Dimensional data warehouse cube architecture diagram">
             <div class="card-body">
-              <h3 class="card-title">Dimensional Data Foundations</h3>
-              <p class="card-text">Led a ground-up restructuring of core dimensional models around Kimball first principles to deliver consistent, trustworthy, and timely analytics across enterprise club operations.</p>
-              <div class="card-meta-tags">
-                <span class="tag-pill">Data Modeling</span>
-                <span class="tag-pill">Kimball</span>
+              <h3 class="card-title">Kimball Dimensional Modeling</h3>
+              <p class="card-text">Rebuilt core data models from first principles so multi-location gym operators get consistent, trustworthy numbers across every report.</p>
+              <div class="card-tags">
+                <span class="meta-pill">Data Modeling</span>
+                <span class="meta-pill">Kimball</span>
               </div>
-              <div class="card-link-row">
-                <a href="https://ignite.abcfitness.com/gym-management-software/insights/" class="card-action-link" target="_blank" rel="noopener noreferrer">Explore ABC Ignite Insights &#8599;</a>
-              </div>
+              <a href="https://ignite.abcfitness.com/gym-management-software/insights/" class="card-action-link" target="_blank" rel="noopener noreferrer">Explore ABC Ignite Insights &#8599;</a>
             </div>
           </article>
         </div>
@@ -133,15 +97,13 @@
           <article class="card">
             <img src="assets/abc-governance.png" class="card-img-top" alt="Enterprise AI enablement and data governance hub illustration">
             <div class="card-body">
-              <h3 class="card-title">Enterprise Governance &amp; AI Enablement</h3>
-              <p class="card-text">Reframed data governance and stewardship around company-wide governed KPI definitions and metric views—powering unified reporting and creating clean semantic foundations for AI tooling.</p>
-              <div class="card-meta-tags">
-                <span class="tag-pill tag-pill-orange">AI Enablement</span>
-                <span class="tag-pill">Governance</span>
+              <h3 class="card-title">Governed KPIs &amp; AI Enablement</h3>
+              <p class="card-text">Standardized company-wide metric definitions and semantic views—eliminating conflicting dashboards and giving AI tools clean data to reason over.</p>
+              <div class="card-tags">
+                <span class="meta-pill">AI Enablement</span>
+                <span class="meta-pill">Governance</span>
               </div>
-              <div class="card-link-row">
-                <a href="https://abcfitness.com/webinars/ai-innovation/" class="card-action-link" target="_blank" rel="noopener noreferrer">View AI Innovation Webinar &#8599;</a>
-              </div>
+              <a href="https://abcfitness.com/webinars/ai-innovation/" class="card-action-link" target="_blank" rel="noopener noreferrer">Watch AI Innovation Webinar &#8599;</a>
             </div>
           </article>
         </div>
@@ -150,136 +112,122 @@
           <article class="card">
             <img src="assets/abc-migration.png" class="card-img-top" alt="Legacy on-premise database servers migrating to Databricks cloud lakehouse">
             <div class="card-body">
-              <h3 class="card-title">Cloud Modernization Strategy</h3>
-              <p class="card-text">Spearheaded the product roadmap transitioning legacy platforms (IBM iSeries DB2, Oracle, MySQL) onto cloud-native AWS and Databricks lakehouse architectures.</p>
-              <div class="card-meta-tags">
-                <span class="tag-pill">AWS Databricks</span>
-                <span class="tag-pill">Modernization</span>
+              <h3 class="card-title">Cloud Lakehouse Modernization</h3>
+              <p class="card-text">Led the roadmap moving reporting workloads off legacy IBM iSeries DB2, Oracle, and MySQL systems onto cloud-native AWS and Databricks.</p>
+              <div class="card-tags">
+                <span class="meta-pill">AWS Databricks</span>
+                <span class="meta-pill">Migration</span>
               </div>
-              <div class="card-link-row">
-                <a href="https://ignite.abcfitness.com/" class="card-action-link" target="_blank" rel="noopener noreferrer">View ABC Ignite Platform &#8599;</a>
-              </div>
+              <a href="https://ignite.abcfitness.com/" class="card-action-link" target="_blank" rel="noopener noreferrer">View ABC Ignite &#8599;</a>
             </div>
           </article>
         </div>
       </div>
 
-      <!-- Public Shipped Proof -->
-      <div class="callout-panel mt-4">
+      <div class="release-strip mt-4">
         <div class="row align-items-center g-3">
           <div class="col-lg-8">
-            <h3>Public Release Log: Shipped Insights Capabilities</h3>
-            <p>Public product updates from ABC Ignite Insights reflect the focus on financial rigor, data consistency, and operator visibility:</p>
-            <ul class="shipped-highlights">
-              <li>Financial Data Mart (FDM) &amp; Ledger Organization</li>
-              <li>Accrual Accounting Views</li>
-              <li>Collections &amp; DRDR Variance Analysis</li>
-              <li>Canadian Tax Statements</li>
-              <li>Member Analysis &amp; Active-Count Alignment</li>
-            </ul>
+            <h3>Public ABC Ignite Insights release log</h3>
+            <p>Shipped capabilities include Financial Data Mart (FDM) ledger views, accrual accounting support, Collections &amp; DRDR variance analysis, Canadian tax statements, and unified active-member reporting.</p>
           </div>
           <div class="col-lg-4 text-lg-end">
-            <a href="https://abcfitness.com/product-updates/?product=abc-ignite&quarter=all&area=insights&keyword=" class="btn-signal" target="_blank" rel="noopener noreferrer">Read ABC Insights Updates &#8599;</a>
+            <a href="https://abcfitness.com/product-updates/?product=abc-ignite&quarter=all&area=insights&keyword=" class="btn-cosmic-primary" target="_blank" rel="noopener noreferrer">Read release notes &#8599;</a>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Agentic Transformation -->
+    <!-- Agentic Software Development -->
     <section id="transformation" aria-labelledby="transformation-heading">
       <div class="section-header">
-        <span class="section-kicker">AI Adoption &amp; Team Enablement</span>
-        <h2 id="transformation-heading" class="section-title">Leading Agentic Software Development Transformation</h2>
+        <span class="section-kicker">AI Transformation</span>
+        <h2 id="transformation-heading" class="section-title">Agentic Software Development</h2>
         <p class="section-lead">
-          After completing the <a href="https://diffusion.io" target="_blank" rel="noopener noreferrer" class="card-action-link d-inline">Diffusion.io &#8599;</a> agentic development boot camp, I am actively teaching teams across ABC how to adopt structured agentic workflows—moving beyond ad-hoc chat prompts to disciplined software factories.
+          Trained at the <a href="https://diffusion.io" target="_blank" rel="noopener noreferrer" class="card-action-link d-inline">Diffusion.io &#8599;</a> agentic development boot camp, I'm leading ABC's shift toward spec-driven agentic engineering—teaching product and development teams how to turn AI tools into reliable delivery workflows.
         </p>
       </div>
 
       <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-3">
         <div class="col">
-          <div class="playbook-step">
-            <span class="step-num">01 // INTENT</span>
-            <h3>Sharp Specs &amp; Guardrails</h3>
-            <p>Product leadership defines crisp business outcomes, constraints, and acceptance gates before any agent touches code.</p>
+          <div class="workflow-step">
+            <span class="step-index">01 · SPEC FIRST</span>
+            <h3>Clear Intent</h3>
+            <p>Define business constraints, edge cases, and acceptance criteria before an agent writes a line of code.</p>
           </div>
         </div>
         <div class="col">
-          <div class="playbook-step">
-            <span class="step-num">02 // DELEGATE</span>
-            <h3>Scoped Agent Execution</h3>
-            <p>Break complex features into bounded tasks where coding agents operate with clear ownership and minimal context bloat.</p>
+          <div class="workflow-step">
+            <span class="step-index">02 · DELEGATE</span>
+            <h3>Bounded Slices</h3>
+            <p>Break complex features into isolated tasks with crisp ownership instead of throwing giant prompts at a repo.</p>
           </div>
         </div>
         <div class="col">
-          <div class="playbook-step">
-            <span class="step-num">03 // VERIFY</span>
-            <h3>Critique &amp; Deterministic Checks</h3>
-            <p>Pair agentic speed with independent review, behavioral verification, and human accountability on architecture and UX.</p>
+          <div class="workflow-step">
+            <span class="step-index">03 · VERIFY</span>
+            <h3>Independent Checks</h3>
+            <p>Pair agentic speed with adversarial critique, automated tests, and deterministic guardrails before release.</p>
           </div>
         </div>
         <div class="col">
-          <div class="playbook-step">
-            <span class="step-num">04 // MULTIPLY</span>
-            <h3>Org-Wide Enablement</h3>
-            <p>Coach product managers and engineers to internalize repeatable agentic patterns—turning AI curiosity into daily delivery leverage.</p>
+          <div class="workflow-step">
+            <span class="step-index">04 · TEACH</span>
+            <h3>Team Adoption</h3>
+            <p>Coach PMs and engineers at ABC through hands-on frameworks so agentic workflows stick across real sprints.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Solopreneurship & Shipped Ventures -->
+    <!-- Businesses I've Built -->
     <section id="ventures" aria-labelledby="ventures-heading">
       <div class="section-header">
-        <span class="section-kicker">Solopreneurship · Built &amp; Shipped End-to-End</span>
-        <h2 id="ventures-heading" class="section-title">Live Products I Built</h2>
-        <p class="section-lead">I test my own AI and product frameworks in the wild—taking ideas from zero to live production, payments, and physical-world fulfillment.</p>
+        <span class="section-kicker">Built &amp; Shipped</span>
+        <h2 id="ventures-heading" class="section-title">Businesses Running in Production</h2>
+        <p class="section-lead">Real utilities on the open internet—designed, built, and operated end to end.</p>
       </div>
 
       <div class="row row-cols-1 row-cols-lg-2 g-4">
         <div class="col">
           <article class="card">
-            <img src="assets/docketstamp-preview.svg" class="card-img-top" alt="DocketStamp deterministic document preparation and USPS certified mail pipeline schematic">
+            <img src="assets/docketstamp-preview.svg" class="card-img-top" alt="DocketStamp deterministic document preparation and USPS certified mail pipeline">
             <div class="card-body">
               <h3 class="card-title">DocketStamp</h3>
-              <p class="card-text">Automated self-help document preparation and USPS mailing utility. Supports First-Class, Certified Mail&#174;, and Electronic Return Receipt with CASS-verified addressing, pre-payment document locking, and strict non-legal-advice boundaries.</p>
-              <div class="card-meta-tags">
-                <span class="tag-pill tag-pill-orange">Solopreneur</span>
-                <span class="tag-pill">Document Ops</span>
-                <span class="tag-pill">USPS Certified Mail</span>
+              <p class="card-text">Have a legal notice or formal letter you need to send? DocketStamp builds deterministic self-help documents, verifies addresses against USPS CASS records, locks the final PDF before payment, and dispatches First-Class, Certified Mail&#174;, or Electronic Return Receipt straight into the mail stream.</p>
+              <div class="card-tags">
+                <span class="meta-pill">USPS Certified Mail</span>
+                <span class="meta-pill">CASS Verified</span>
+                <span class="meta-pill">Self-Help Utility</span>
               </div>
-              <div class="card-link-row">
-                <a href="https://docketstamp.com" class="btn-signal" target="_blank" rel="noopener noreferrer">Visit docketstamp.com &#8599;</a>
-              </div>
+              <a href="https://docketstamp.com" class="btn-cosmic-primary align-self-start" target="_blank" rel="noopener noreferrer">Send a notice at docketstamp.com &#8599;</a>
             </div>
           </article>
         </div>
 
         <div class="col">
           <article class="card">
-            <img src="assets/sendmynotes-preview.svg" class="card-img-top" alt="SendMyNotes and Aster and Blanche Press real pen-on-paper handwritten card illustration">
+            <img src="assets/sendmynotes-preview.svg" class="card-img-top" alt="SendMyNotes and Aster and Blanche Press pen-on-paper greeting card studio">
             <div class="card-body">
               <h3 class="card-title">SendMyNotes · Aster &amp; Blanche Press</h3>
-              <p class="card-text">Digital commission studio turning online messages into real pen-on-paper handwritten greeting cards on 120 lb archival cardstock, stamped and dispatched via USPS—combining software convenience with tactile craft.</p>
-              <div class="card-meta-tags">
-                <span class="tag-pill tag-pill-orange">Solopreneur</span>
-                <span class="tag-pill">Physical-Digital Ops</span>
-                <span class="tag-pill">Consumer UX</span>
+              <p class="card-text">Send real, pen-on-paper greeting cards without hunting down stamps or a mailbox. Type your message online and we put real ink on 120 lb archival cardstock, seal the envelope, stamp it, and drop it in the USPS mail within 24 hours.</p>
+              <div class="card-tags">
+                <span class="meta-pill">Real Pen &amp; Ink</span>
+                <span class="meta-pill">120 lb Cardstock</span>
+                <span class="meta-pill">24h Dispatch</span>
               </div>
-              <div class="card-link-row">
-                <a href="https://sendmynotes.com" class="btn-signal" target="_blank" rel="noopener noreferrer">Visit sendmynotes.com &#8599;</a>
-              </div>
+              <a href="https://sendmynotes.com" class="btn-cosmic-primary align-self-start" target="_blank" rel="noopener noreferrer">Send a card at sendmynotes.com &#8599;</a>
             </div>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- Technical Playground -->
+    <!-- Experiments & Side Quests -->
     <section id="sandbox" aria-labelledby="sandbox-heading">
       <div class="section-header">
-        <span class="section-kicker">Builder Range &amp; Experiments</span>
-        <h2 id="sandbox-heading" class="section-title">Technical Playground</h2>
-        <p class="section-lead">Quantitative modeling, hackathon wins, and AI learning tools—proof of hands-on fluency without losing sight of the day job.</p>
+        <span class="section-kicker">Projects</span>
+        <h2 id="sandbox-heading" class="section-title">Models, Hackathons &amp; Side Quests</h2>
+        <p class="section-lead">Financial calculators, weekend builds, and things I couldn't resist shipping.</p>
       </div>
 
       <div class="row row-cols-1 row-cols-md-3 g-4">
@@ -288,15 +236,13 @@
             <img src="assets/tophat_financial.jpg" class="card-img-top" alt="Tophat Financial logo">
             <div class="card-body">
               <h3 class="card-title">Tophat Financial</h3>
-              <p class="card-text">Quantitative personal cash-flow and retirement modeling engine estimating future financial trajectories from income, savings rate, and expected return assumptions.</p>
-              <div class="card-meta-tags">
-                <span class="tag-pill">React</span>
-                <span class="tag-pill">TypeScript</span>
-                <span class="tag-pill">Google Cloud</span>
+              <p class="card-text">Model your financial future. Plug in income, savings, and expected return assumptions to project and stress-test long-term cash flow.</p>
+              <div class="card-tags">
+                <span class="meta-pill">React</span>
+                <span class="meta-pill">TypeScript</span>
+                <span class="meta-pill">Google Cloud</span>
               </div>
-              <div class="card-link-row">
-                <a href="https://planner-cac2a.web.app/" class="card-action-link" target="_blank" rel="noopener noreferrer">Launch Tophat Financial &#8599;</a>
-              </div>
+              <a href="https://planner-cac2a.web.app/" class="card-action-link" target="_blank" rel="noopener noreferrer">Try Tophat Financial &#8599;</a>
             </div>
           </article>
         </div>
@@ -306,15 +252,13 @@
             <img src="assets/weatherwise-screenshot.png" class="card-img-top" alt="WeatherWise disaster preparedness web app screenshot">
             <div class="card-body">
               <h3 class="card-title">WeatherWise</h3>
-              <p class="card-text">Envirobuild 2024 Hackathon Winner. Delivers localized disaster preparedness playbooks and actionable guidance for geological emergencies.</p>
-              <div class="card-meta-tags">
-                <span class="tag-pill tag-pill-orange">Hackathon Winner</span>
-                <span class="tag-pill">Next.js</span>
-                <span class="tag-pill">PostgreSQL</span>
+              <p class="card-text">Envirobuild 2024 Hackathon Winner. Localized disaster preparedness and geological emergency playbooks (plus an unapologetically silly Alien Activity gauge).</p>
+              <div class="card-tags">
+                <span class="meta-pill">Hackathon Winner</span>
+                <span class="meta-pill">Next.js</span>
+                <span class="meta-pill">PostgreSQL</span>
               </div>
-              <div class="card-link-row">
-                <a href="https://water-wars-psi.vercel.app" class="card-action-link" target="_blank" rel="noopener noreferrer">Open WeatherWise &#8599;</a>
-              </div>
+              <a href="https://water-wars-psi.vercel.app" class="card-action-link" target="_blank" rel="noopener noreferrer">Open WeatherWise &#8599;</a>
             </div>
           </article>
         </div>
@@ -324,28 +268,26 @@
             <img src="assets/nza-thumbnail.png" class="card-img-top" alt="Not Zeke Academy AI-powered learning platform graphic">
             <div class="card-body">
               <h3 class="card-title">not Zeke Academy</h3>
-              <p class="card-text">AI-powered adaptive learning platform exploring learner-aware reactive pedagogy and dynamically tailored curricula.</p>
-              <div class="card-meta-tags">
-                <span class="tag-pill">React</span>
-                <span class="tag-pill">Firebase</span>
-                <span class="tag-pill">AI Pedagogy</span>
+              <p class="card-text">An AI-powered learning tool that adapts curricula to what you actually know—and skips what you don't.</p>
+              <div class="card-tags">
+                <span class="meta-pill">React</span>
+                <span class="meta-pill">Firebase</span>
+                <span class="meta-pill">Adaptive AI</span>
               </div>
-              <div class="card-link-row">
-                <a href="https://github.com/zbrustkern/snipIt" class="card-action-link" target="_blank" rel="noopener noreferrer">View Source on GitHub &#8599;</a>
-              </div>
+              <a href="https://github.com/zbrustkern/snipIt" class="card-action-link" target="_blank" rel="noopener noreferrer">View on GitHub &#8599;</a>
             </div>
           </article>
         </div>
       </div>
 
-      <div class="fun-banner mt-4">
+      <div class="fun-strip mt-4">
         <div class="row align-items-center g-3">
           <div class="col-md-8">
-            <h3>Want the unfiltered retro lab?</h3>
-            <p>Visit <strong class="hero-accent">/fun</strong> for earlier builds and games—including Qubic (3D Tic-Tac-Toe), MoarSquare, The Wrench Collective, LifTracker, and Checkers.</p>
+            <h3>Still scrolling?</h3>
+            <p>Over in <strong>/fun</strong> you'll find 3D tic-tac-toe (Qubic), a social check-in map, a car garage community, and a version of Checkers that lets you cheat.</p>
           </div>
           <div class="col-md-4 text-md-end">
-            <a href="fun.html" class="btn-outline-cyan">Enter /fun Lab &rarr;</a>
+            <a href="fun.html" class="btn-cosmic-secondary">Open /fun &rarr;</a>
           </div>
         </div>
       </div>
@@ -354,9 +296,9 @@
     <!-- Contact -->
     <section id="contact" aria-labelledby="contact-heading">
       <div class="section-header">
-        <span class="section-kicker">Connect</span>
-        <h2 id="contact-heading" class="section-title">Let's Build Something Significant</h2>
-        <p class="section-lead">Open to conversations around Product Leadership, Enterprise Data &amp; AI Platforms, and Agentic Transformation.</p>
+        <span class="section-kicker">Contact</span>
+        <h2 id="contact-heading" class="section-title">Let's talk</h2>
+        <p class="section-lead">Hiring for Product Leadership, Data Platforms, or AI Transformation—or just want to compare notes on agentic workflows?</p>
       </div>
 
       <div class="row g-3 mb-4">
@@ -384,8 +326,8 @@
 
   <footer class="site-footer">
     <div class="container py-0 d-flex flex-column flex-sm-row justify-content-between align-items-sm-center gap-2">
-      <span>Zeke Brustkern · Data, AI &amp; Product Leadership</span>
-      <span>If they ask who, it's <a href="fun.html" class="card-action-link d-inline">notZeke</a>.</span>
+      <span>Zeke Brustkern · If they ask who, it's <a href="fun.html" class="card-action-link d-inline">notZeke</a>.</span>
+      <button id="motion-toggle" class="motion-btn" type="button" aria-label="Pause background starfield">Pause starfield</button>
     </div>
   </footer>
 

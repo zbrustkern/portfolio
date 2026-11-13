@@ -1,62 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-  // --- Color Scheme Toggle Logic ---
-  const themeToggleBtn = document.getElementById('theme-toggle');
-  const colorSchemeMeta = document.querySelector('meta[name="color-scheme"]');
-  const darkSchemeQuery = window.matchMedia('(prefers-color-scheme: dark)');
-
-  function getStoredScheme() {
-    try {
-      const value = localStorage.getItem('color-scheme');
-      return value === 'light' || value === 'dark' ? value : null;
-    } catch {
-      return null;
-    }
-  }
-
-  function setStoredScheme(value) {
-    try {
-      if (value === null) {
-        localStorage.removeItem('color-scheme');
-      } else {
-        localStorage.setItem('color-scheme', value);
-      }
-    } catch {
-      // Storage blocked; visual override still applies for current page
-    }
-  }
-
-  function getRenderedScheme() {
-    const stored = getStoredScheme();
-    if (stored) return stored;
-    return darkSchemeQuery.matches ? 'dark' : 'light';
-  }
-
-  function applyColorSchemeMeta(value) {
-    if (!colorSchemeMeta) return;
-    colorSchemeMeta.content = value ?? 'light dark';
-  }
-
-  applyColorSchemeMeta(getStoredScheme());
-
-  if (themeToggleBtn) {
-    themeToggleBtn.addEventListener('click', () => {
-      const currentRendered = getRenderedScheme();
-      const target = currentRendered === 'dark' ? 'light' : 'dark';
-      const systemScheme = darkSchemeQuery.matches ? 'dark' : 'light';
-      const nextStored = target === systemScheme ? null : target;
-
-      setStoredScheme(nextStored);
-      applyColorSchemeMeta(nextStored);
-    });
-  }
-
-  window.addEventListener('storage', (event) => {
-    if (event.key === 'color-scheme') {
-      applyColorSchemeMeta(getStoredScheme());
-    }
-  });
-
-  // --- Starfield Canvas Animation ---
   const canvas = document.getElementById('starfield');
   if (!canvas) return;
   const ctx = canvas.getContext('2d');
@@ -69,18 +11,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
   let width = 0;
   let height = 0;
-  const numStars = 90;
+  const numStars = 110;
   const stars = [];
 
   function initStars() {
     stars.length = 0;
+    const palette = ['#e2e8f0', '#7dd3fc', '#fde68a'];
     for (let i = 0; i < numStars; i++) {
       stars.push({
         x: Math.random() * width,
         y: Math.random() * height,
-        radius: 0.6 + Math.random() * 1.2,
-        vx: (Math.random() - 0.5) * 0.65,
-        vy: (Math.random() - 0.5) * 0.65
+        radius: 0.5 + Math.random() * 1.15,
+        alpha: 0.25 + Math.random() * 0.55,
+        color: palette[i % palette.length],
+        vx: (Math.random() - 0.5) * 0.28,
+        vy: (Math.random() - 0.5) * 0.28
       });
     }
   }
@@ -98,19 +43,13 @@ document.addEventListener('DOMContentLoaded', () => {
   function drawFrame(advance) {
     ctx.clearRect(0, 0, width, height);
 
-    const style = getComputedStyle(document.documentElement);
-    const starColor = style.getPropertyValue('--star-color').trim() || '#4adfff';
-    const isDark = getRenderedScheme() === 'dark';
-
-    ctx.globalCompositeOperation = isDark ? 'lighter' : 'source-over';
-    ctx.fillStyle = starColor;
-    ctx.globalAlpha = isDark ? 0.65 : 0.45;
-    ctx.beginPath();
-
     for (let i = 0; i < stars.length; i++) {
       const s = stars[i];
-      ctx.moveTo(s.x + s.radius, s.y);
+      ctx.globalAlpha = s.alpha;
+      ctx.fillStyle = s.color;
+      ctx.beginPath();
       ctx.arc(s.x, s.y, s.radius, 0, Math.PI * 2);
+      ctx.fill();
 
       if (advance) {
         s.x += s.vx;
@@ -121,7 +60,6 @@ document.addEventListener('DOMContentLoaded', () => {
         if (s.y > height) s.y = 0;
       }
     }
-    ctx.fill();
     ctx.globalAlpha = 1;
   }
 
@@ -134,8 +72,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function updateMotionButton(isPaused) {
     if (!motionToggleBtn) return;
-    motionToggleBtn.textContent = isPaused ? 'Play Stars' : 'Pause Stars';
-    motionToggleBtn.setAttribute('aria-label', isPaused ? 'Play starfield animation' : 'Pause starfield animation');
+    motionToggleBtn.textContent = isPaused ? 'Play starfield' : 'Pause starfield';
+    motionToggleBtn.setAttribute('aria-label', isPaused ? 'Play background starfield' : 'Pause background starfield');
   }
 
   function tick() {
@@ -172,7 +110,6 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   motionQuery.addEventListener('change', syncMotionState);
-  darkSchemeQuery.addEventListener('change', () => drawFrame(false));
 
   resize();
   syncMotionState();
