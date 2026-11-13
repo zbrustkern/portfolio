@@ -1,255 +1,298 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="./assets/thumbnail.jpeg">
-    <title>Not Zeke's Portfolio</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/styles.css">
-    <meta property="og:title" content="It's Not Zeke" />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://notZeke.com" />
-    <meta property="og:image" content="assets/thumbnails.jpeg" />
-    <meta property="og:description" content="If they asked who, it's not Zeke." />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light dark">
+  <script>
+    try {
+      const savedScheme = localStorage.getItem('color-scheme');
+      if (savedScheme === 'light' || savedScheme === 'dark') {
+        document.querySelector('meta[name="color-scheme"]').content = savedScheme;
+      }
+    } catch {}
+  </script>
+  <link rel="icon" type="image/x-icon" href="./assets/thumbnail.jpeg">
+  <title>Not Zeke's /fun Lab | Zeke Brustkern</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/styles.css">
+  <script defer src="./js/app.js"></script>
+  <meta property="og:title" content="It's Not Zeke — /fun Lab">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://notZeke.com/fun.html">
+  <meta property="og:image" content="assets/thumbnail.jpeg">
+  <meta property="og:description" content="Personal experiments, games, and earlier builds by Zeke Brustkern.">
 </head>
 <body>
-    <canvas id="starfield"></canvas>
-    <nav class="navbar navbar-expand-lg navbar-dark">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">Where to?</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <div class="navbar-nav">
-                    <a class="nav-link active" aria-current="page" href="#zeke">Zeke</a>
-                    <a class="nav-link" href="#tophat">Tophat Financial</a>
-                    <a class="nav-link" href="#WeatherWise">WeatherWise</a>
-                    <a class="nav-link" href="#moar-square">MoarSquare</a>
-                    <a class="nav-link" href="#wrench-collective">The Wrench Collective</a>
-                    <a class="nav-link" href="#liftracker">Liftracker</a>
-                    <a class="nav-link" href="#qubic">Qubic</a>
-                    <a class="nav-link" href="#checkers">Checkers</a>
-                    <a class="nav-link" href="#LPS">LPS</a>
-                    <a class="nav-link" href="#chemfinder">ChemFinder</a>
-                    <a class="nav-link" href="#contact">Contact</a>
-                </div>
+  <canvas id="starfield" aria-hidden="true"></canvas>
+
+  <header class="site-header">
+    <a href="#main-content" class="skip-link visually-hidden">Skip to main content</a>
+    <nav class="navbar navbar-expand-lg fixed-top" aria-label="Primary">
+      <div class="container-fluid px-lg-4">
+        <a class="navbar-brand" href="index.html">ZB // /FUN LAB</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarFunMarkup" aria-controls="navbarFunMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
+              <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+            </svg>
+          </span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarFunMarkup">
+          <div class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
+            <a class="nav-link" href="index.html">&larr; Main Portfolio</a>
+            <a class="nav-link" href="#tophat">Tophat</a>
+            <a class="nav-link" href="#weatherwise">WeatherWise</a>
+            <a class="nav-link" href="#moar-square">MoarSquare</a>
+            <a class="nav-link" href="#qubic">Qubic</a>
+            <a class="nav-link" href="#contact">Contact</a>
+            <div class="nav-controls mt-2 mt-lg-0 ms-lg-2">
+              <button id="motion-toggle" class="icon-toggle" type="button" aria-label="Pause starfield animation">Pause Stars</button>
+              <button id="theme-toggle" class="icon-toggle" type="button">
+                <span class="theme-state-for-dark">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
+                    <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8M8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0m0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13m8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5M3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8m10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0m-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0m9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707M4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708"/>
+                  </svg>
+                  <span>Light<span class="visually-hidden"> theme</span></span>
+                </span>
+                <span class="theme-state-for-light">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
+                    <path d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277q.792-.001 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278"/>
+                  </svg>
+                  <span>Dark<span class="visually-hidden"> theme</span></span>
+                </span>
+              </button>
             </div>
+          </div>
         </div>
+      </div>
     </nav>
+  </header>
 
-    <div class="container mt-5">
-        <div class="row row-cols-1 row-cols-md-3 g-4">
-            <div class="col">
-                <div id="zeke" class="card h-100">
-                    <img src="assets/postcard.png" class="card-img-top" alt="A dashingly handsome developer">
-                    <div class="card-body">
-                        <h5 class="card-title">Zeke Brustkern</h5>
-                        <p class="card-text">My name is Zeke Brustkern. I like building things- quantitative finance models, enterprise software, and consumer facing applications. Here are some personal projects with a variety of technologies.</p>
-                        <a href="https://github.com/zbrustkern" class="btn btn-primary stretched-link">GitHub</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col">
-                <div id="tophat" class="card h-100">
-                    <img src="assets/tophat_financial.jpg" class="card-img-top" alt="Logo for Tophat Financial">
-                    <div class="card-body">
-                        <h5 class="card-title">Tophat Financial</h5>
-                        <p class="card-text">Work in progress. Build a financial plan for your future. Use the income calculator to estimate your future cash flow given your income, savings, and expected return.</p>
-                        <div class="mb-2">
-                            <span class="badge">React</span>
-                            <span class="badge">TypeScript</span>
-                            <span class="badge">Google Cloud</span>
-                        </div>
-                        <a href="https://planner-cac2a.web.app/" class="stretched-link"></a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col">
-                <div id="WeatherWise" class="card h-100">
-                    <img src="assets/weatherwise-screenshot.png" class="card-img-top" alt="A screenshot of disaster preparedness app">
-                    <div class="card-body">
-                        <h5 class="card-title">Cloudy With a Chance of Chaos Probability</h5>
-                        <p class="card-text">Envirobuild 2024 Hackathon Winner, this app provides disaster preparedness information localized to the user with info, tips, and advice on what to do in case of geological emergencies.</p>
-                        <div class="mb-2">
-                            <span class="badge">React</span>
-                            <span class="badge">Next.js</span>
-                            <span class="badge">PostgreSQL</span>
-                        </div>
-                        <a href="https://water-wars-psi.vercel.app" class="stretched-link"></a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col">
-                <div id="moar-square" class="card h-100">
-                    <img src="assets/moarsquare-screenshot.png" class="card-img-top" alt="A screenshot of a social media checkin app">
-                    <div class="card-body">
-                        <h5 class="card-title">Moar Square</h5>
-                        <p class="card-text">Why stop at Four? With Moar Square, you can check in, share your location with your friends, and comment on everyone's checkins while seeing their location on an interactive map.</p>
-                        <div class="mb-2">
-                            <span class="badge">React</span>
-                            <span class="badge">Flask</span>
-                            <span class="badge">PostgreSQL</span>
-                        </div>
-                        <a href="https://moar-square.netlify.app/" class="stretched-link"></a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col">
-                <div id="wrench-collective" class="card h-100">
-                    <img src="assets/wrench-collective-screenshot.png" class="card-img-top" alt="A screenshot of a car tracking app">
-                    <div class="card-body">
-                        <h5 class="card-title">The Wrench Collective</h5>
-                        <p class="card-text">The Wrench Collective is a community of car enthusiasts sharing details of their cars, their garages, and discussion thereof. This project was a group effort with @Zecrim and @cmonckton2626.</p>
-                        <div class="mb-2">
-                            <span class="badge">React</span>
-                            <span class="badge">Express.js</span>
-                            <span class="badge">MongoDB</span>
-                        </div>
-                        <a href="https://the-wrench-collective-b3c568642add.herokuapp.com/" class="stretched-link"></a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col">
-                <div id="liftracker" class="card h-100">
-                    <img src="assets/liftracker-screenshot.png" class="card-img-top" alt="A barbell logo for LifTracker">
-                    <div class="card-body">
-                        <h5 class="card-title">LifTracker</h5>
-                        <p class="card-text">LifTracker is an all-in-one solution for tracking your weightlifting stats and designing workouts to improve them. Get fit with LifTracker.</p>
-                        <div class="mb-2">
-                            <span class="badge">Node.js</span>
-                            <span class="badge">Express.js</span>
-                            <span class="badge">MongoDB</span>
-                        </div>
-                        <a href="https://liftracker-68f4ba8f13b2.herokuapp.com/" class="stretched-link"></a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col">
-                <div id="qubic" class="card h-100">
-                    <img src="assets/qubic-screenshot.png" class="card-img-top" alt="Synthwave three dimensional tic tac toe">
-                    <div class="card-body">
-                        <h5 class="card-title">Qubic</h5>
-                        <p class="card-text">Qubic is a three dimensional version of tic tac toe. This game runs completely in the browser. Bonus points if you and a friend can reach a tie!</p>
-                        <div class="mb-2">
-                            <span class="badge">HTML</span>
-                            <span class="badge">CSS</span>
-                            <span class="badge">JavaScript</span>
-                        </div>
-                        <a href="https://zbrustkern.github.io/qubic/" class="stretched-link"></a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col">
-                <div id="checkers" class="card h-100">
-                    <img src="assets/checkers-screenshot.png" class="card-img-top" alt="Black and red checkers board">
-                    <div class="card-body">
-                        <h5 class="card-title">Checkers</h5>
-                        <p class="card-text">Checkers: classic board game. This version stays true to real life and doesn't prevent you from cheating!</p>
-                        <a href="https://zbrustkern.github.io/checkTwo/" class="stretched-link"></a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col">
-                <div id="LPS" class="card h-100">
-                    <img src="assets/LPS-screenshot.jpeg" class="card-img-top" alt="A Rock, scroll of papyrus, and a scalpel">
-                    <div class="card-body">
-                        <h5 class="card-title">Lapis, Papyrus, Scalpellus</h5>
-                        <p class="card-text">Translated to English: Rock, Paper, Scissors! In this version you play against a randomizer.</p>
-                        <a href="https://zbrustkern.github.io/LPS/" class="stretched-link"></a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col">
-                <div id="chemfinder" class="card h-100">
-                    <img src="assets/chemfinder-screenshot.png" class="card-img-top" alt="Some Ruby Code describing controllers">
-                    <div class="card-body">
-                        <h5 class="card-title">ChemFinder (Ruby on Rails)</h5>
-                        <p class="card-text">One of my first full stack projects, no longer actively maintained.</p>
-                        <a href="https://github.com/zbrustkern/chemfindertwo" class="stretched-link"></a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col">
-                <div id="contact" class="card h-100">
-                    <img src="assets/contact-me.jpeg" class="card-img-top" alt="Contact me image">
-                    <div class="card-body">
-                        <h5 class="card-title">Contact Me</h5>
-                        <p class="card-text">Want to get in touch?</p>
-                        <a href="mailto:info@notzeke.com" class="stretched-link"></a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col">
-                <div id="linkedin" class="card h-100">
-                    <img src="assets/LinkedIn_logo_initials.png" class="card-img-top" alt="LinkedIn logo">
-                    <div class="card-body">
-                        <h5 class="card-title">LinkedIn</h5>
-                        <p class="card-text">Professional Networking</p>
-                        <a href="https://linkedin.com/in/zekebrustkern" class="stretched-link"></a>
-                    </div>
-                </div>
-            </div>
+  <main id="main-content" class="container" tabindex="-1">
+    <section class="hero-section pb-4">
+      <div class="row align-items-center g-4">
+        <div class="col-lg-8">
+          <span class="eyebrow">Archive &amp; Experiments</span>
+          <h1 class="hero-title">The /fun Lab<span class="hero-accent">.</span></h1>
+          <p class="hero-subtitle">Where it started—personal builds, hackathon sprints, browser games, and full-stack experiments across Python, JavaScript, and Ruby.</p>
+          <div class="hero-actions">
+            <a href="index.html" class="btn-signal">&larr; Back to Main Portfolio</a>
+            <a href="https://github.com/zbrustkern" class="btn-outline-cyan" target="_blank" rel="noopener noreferrer">GitHub Profile &#8599;</a>
+          </div>
         </div>
+        <div class="col-lg-4">
+          <figure class="hero-frame mb-0">
+            <img src="assets/postcard.png" alt="Retro space postcard reading Not Zeke">
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section aria-labelledby="archive-heading">
+      <div class="section-header mt-3">
+        <span class="section-kicker">Full Project Archive</span>
+        <h2 id="archive-heading" class="section-title">Apps, Games &amp; Early Builds</h2>
+        <p class="section-lead">Some are live utilities; others are historical snapshots from learning new stacks and shipping for the joy of it.</p>
+      </div>
+
+      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+        <div class="col">
+          <article id="tophat" class="card">
+            <img src="assets/tophat_financial.jpg" class="card-img-top" alt="Tophat Financial logo">
+            <div class="card-body">
+              <h3 class="card-title">Tophat Financial</h3>
+              <p class="card-text">Build a financial plan for your future. Uses an income and cash-flow calculator to model future wealth from income, savings, and expected return.</p>
+              <div class="card-meta-tags">
+                <span class="tag-pill">React</span>
+                <span class="tag-pill">TypeScript</span>
+                <span class="tag-pill">Google Cloud</span>
+              </div>
+              <div class="card-link-row">
+                <a href="https://planner-cac2a.web.app/" class="card-action-link" target="_blank" rel="noopener noreferrer">Open Tophat Financial &#8599;</a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="col">
+          <article id="weatherwise" class="card">
+            <img src="assets/weatherwise-screenshot.png" class="card-img-top" alt="WeatherWise disaster preparedness app screenshot">
+            <div class="card-body">
+              <h3 class="card-title">WeatherWise (Chaos Probability)</h3>
+              <p class="card-text">Envirobuild 2024 Hackathon Winner. Provides localized disaster preparedness information, tips, and guidance for geological emergencies.</p>
+              <div class="card-meta-tags">
+                <span class="tag-pill tag-pill-orange">Hackathon Winner</span>
+                <span class="tag-pill">Next.js</span>
+                <span class="tag-pill">PostgreSQL</span>
+              </div>
+              <div class="card-link-row">
+                <a href="https://water-wars-psi.vercel.app" class="card-action-link" target="_blank" rel="noopener noreferrer">Open WeatherWise &#8599;</a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="col">
+          <article id="moar-square" class="card">
+            <img src="assets/moarsquare-screenshot.png" class="card-img-top" alt="Moar Square social check-in map screenshot">
+            <div class="card-body">
+              <h3 class="card-title">Moar Square</h3>
+              <p class="card-text">Why stop at Four? Check in, share your location with friends, and comment on check-ins while viewing everyone on an interactive map.</p>
+              <div class="card-meta-tags">
+                <span class="tag-pill">React</span>
+                <span class="tag-pill">Flask</span>
+                <span class="tag-pill">PostgreSQL</span>
+              </div>
+              <div class="card-link-row">
+                <a href="https://moar-square.netlify.app/" class="card-action-link" target="_blank" rel="noopener noreferrer">Open Moar Square &#8599;</a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="col">
+          <article id="wrench-collective" class="card">
+            <img src="assets/wrench-collective-screenshot.png" class="card-img-top" alt="The Wrench Collective car enthusiast community screenshot">
+            <div class="card-body">
+              <h3 class="card-title">The Wrench Collective</h3>
+              <p class="card-text">A community for car enthusiasts sharing details of their builds, garages, and discussions. Group build with @Zecrim and @cmonckton2626.</p>
+              <div class="card-meta-tags">
+                <span class="tag-pill">React</span>
+                <span class="tag-pill">Express.js</span>
+                <span class="tag-pill">MongoDB</span>
+              </div>
+              <div class="card-link-row">
+                <a href="https://the-wrench-collective-b3c568642add.herokuapp.com/" class="card-action-link" target="_blank" rel="noopener noreferrer">Open Wrench Collective &#8599;</a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="col">
+          <article id="liftracker" class="card">
+            <img src="assets/liftracker-screenshot.png" class="card-img-top" alt="LifTracker barbell logo">
+            <div class="card-body">
+              <h3 class="card-title">LifTracker</h3>
+              <p class="card-text">All-in-one tracker for weightlifting stats and custom workout programming.</p>
+              <div class="card-meta-tags">
+                <span class="tag-pill">Node.js</span>
+                <span class="tag-pill">Express.js</span>
+                <span class="tag-pill">MongoDB</span>
+              </div>
+              <div class="card-link-row">
+                <a href="https://liftracker-68f4ba8f13b2.herokuapp.com/" class="card-action-link" target="_blank" rel="noopener noreferrer">Open LifTracker &#8599;</a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="col">
+          <article id="qubic" class="card">
+            <img src="assets/qubic-screenshot.png" class="card-img-top" alt="Qubic 3D synthwave tic tac toe board">
+            <div class="card-body">
+              <h3 class="card-title">Qubic</h3>
+              <p class="card-text">Three-dimensional tic-tac-toe running completely in the browser. Bonus points if you and a friend manage a tie.</p>
+              <div class="card-meta-tags">
+                <span class="tag-pill">HTML</span>
+                <span class="tag-pill">CSS</span>
+                <span class="tag-pill">JavaScript</span>
+              </div>
+              <div class="card-link-row">
+                <a href="https://zbrustkern.github.io/qubic/" class="card-action-link" target="_blank" rel="noopener noreferrer">Play Qubic &#8599;</a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="col">
+          <article id="checkers" class="card">
+            <img src="assets/checkers-screenshot.png" class="card-img-top" alt="Black and red checkers board">
+            <div class="card-body">
+              <h3 class="card-title">Checkers</h3>
+              <p class="card-text">Classic board game in the browser—stays true to real life by not stopping you from cheating.</p>
+              <div class="card-meta-tags">
+                <span class="tag-pill">Browser Game</span>
+                <span class="tag-pill">JavaScript</span>
+              </div>
+              <div class="card-link-row">
+                <a href="https://zbrustkern.github.io/checkTwo/" class="card-action-link" target="_blank" rel="noopener noreferrer">Play Checkers &#8599;</a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="col">
+          <article id="LPS" class="card">
+            <img src="assets/LPS-screenshot.jpeg" class="card-img-top" alt="Rock, papyrus scroll, and scalpel illustration">
+            <div class="card-body">
+              <h3 class="card-title">Lapis, Papyrus, Scalpellus</h3>
+              <p class="card-text">Rock, Paper, Scissors in Latin—play against a randomizer.</p>
+              <div class="card-meta-tags">
+                <span class="tag-pill">Mini Game</span>
+                <span class="tag-pill">JavaScript</span>
+              </div>
+              <div class="card-link-row">
+                <a href="https://zbrustkern.github.io/LPS/" class="card-action-link" target="_blank" rel="noopener noreferrer">Play LPS &#8599;</a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="col">
+          <article id="chemfinder" class="card">
+            <img src="assets/chemfinder-screenshot.png" class="card-img-top" alt="Ruby on Rails controller code for ChemFinder">
+            <div class="card-body">
+              <h3 class="card-title">ChemFinder (Archived)</h3>
+              <p class="card-text">One of my earliest full-stack Ruby on Rails builds, preserved on GitHub as an archive.</p>
+              <div class="card-meta-tags">
+                <span class="tag-pill">Ruby on Rails</span>
+                <span class="tag-pill">Archived</span>
+              </div>
+              <div class="card-link-row">
+                <a href="https://github.com/zbrustkern/chemfindertwo" class="card-action-link" target="_blank" rel="noopener noreferrer">View ChemFinder Repo &#8599;</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" aria-labelledby="fun-contact-heading">
+      <div class="section-header">
+        <span class="section-kicker">Get in Touch</span>
+        <h2 id="fun-contact-heading" class="section-title">Connect</h2>
+      </div>
+      <div class="row g-3 mb-4">
+        <div class="col-md-4">
+          <a href="mailto:info@notzeke.com" class="contact-card">
+            <h3>Email</h3>
+            <p>info@notzeke.com</p>
+          </a>
+        </div>
+        <div class="col-md-4">
+          <a href="https://linkedin.com/in/zekebrustkern" class="contact-card" target="_blank" rel="noopener noreferrer">
+            <h3>LinkedIn</h3>
+            <p>linkedin.com/in/zekebrustkern</p>
+          </a>
+        </div>
+        <div class="col-md-4">
+          <a href="https://github.com/zbrustkern" class="contact-card" target="_blank" rel="noopener noreferrer">
+            <h3>GitHub</h3>
+            <p>github.com/zbrustkern</p>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container py-0 d-flex flex-column flex-sm-row justify-content-between align-items-sm-center gap-2">
+      <span>Zeke Brustkern · /fun Lab</span>
+      <a href="index.html" class="card-action-link">Return to Main Portfolio &rarr;</a>
     </div>
+  </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-        // Starfield animation
-        const canvas = document.getElementById('starfield');
-        const ctx = canvas.getContext('2d');
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
-
-        const stars = [];
-        for (let i = 0; i < 100; i++) {
-            stars.push({
-                x: Math.random() * canvas.width,
-                y: Math.random() * canvas.height,
-                radius: Math.random() * 1.5,
-                vx: Math.floor(Math.random() * 50) - 25,
-                vy: Math.floor(Math.random() * 50) - 25
-            });
-        }
-
-        function draw() {
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
-            ctx.globalCompositeOperation = "lighter";
-
-            for (let i = 0, x = stars.length; i < x; i++) {
-                const s = stars[i];
-
-                ctx.fillStyle = "#00ffff";
-                ctx.beginPath();
-                ctx.arc(s.x, s.y, s.radius, 0, 2 * Math.PI);
-                ctx.fill();
-
-                s.x += s.vx / 30;
-                s.y += s.vy / 30;
-
-                if (s.x < 0 || s.x > canvas.width) s.vx = -s.vx;
-                if (s.y < 0 || s.y > canvas.height) s.vy = -s.vy;
-            }
-        }
-
-        function animate() {
-            draw();
-            requestAnimationFrame(animate);
-        }
-
-        animate();
-    </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>

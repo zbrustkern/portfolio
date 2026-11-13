@@ -1,189 +1,393 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="./assets/thumbnail.jpeg">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/styles.css">
-    <script defer src="./js/app.js"></script>
-    <title>Zeke Brustkern | Director of Product</title>
-<!-- Open Graph meta data-->
-    <meta property="og:title" content="Zeke Brustkern - Director of Product" />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://notZeke.com" />
-    <meta property="og:image" content="assets/thumbnail.jpeg" />
-    <meta property="og:description" content="Director, Product Management for Data, AI, and Reporting." />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light dark">
+  <script>
+    try {
+      const savedScheme = localStorage.getItem('color-scheme');
+      if (savedScheme === 'light' || savedScheme === 'dark') {
+        document.querySelector('meta[name="color-scheme"]').content = savedScheme;
+      }
+    } catch {}
+  </script>
+  <link rel="icon" type="image/x-icon" href="./assets/thumbnail.jpeg">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/styles.css">
+  <script defer src="./js/app.js"></script>
+  <title>Zeke Brustkern | Product, Data &amp; AI Transformation Leadership</title>
+  <meta name="description" content="Director of Product Management for Data, AI, and Reporting. Leading agentic software development transformation and building real products end to end.">
+  <meta property="og:title" content="Zeke Brustkern | Product, Data &amp; AI Transformation">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://notZeke.com">
+  <meta property="og:image" content="assets/postcard.png">
+  <meta property="og:description" content="Director of Product Management for Data, AI, and Reporting — leading agentic software development transformation and building real products.">
 </head>
 <body>
-  <canvas id="starfield"></canvas>
-  
-  <header>
-      <nav class="navbar navbar-expand-lg fixed-top">
-          <div class="container-fluid">
-            <a class="navbar-brand" href="#">ZB</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-              <div class="navbar-nav ms-auto align-items-center">
-                <a class="nav-link" href="#featured">Executive Leadership</a>
-                <a class="nav-link" href="#sandbox">Playground</a>
-                <a class="nav-link" href="#contact">Contact</a>
-                <button id="theme-toggle" aria-label="Toggle Theme">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-moon-stars" viewBox="0 0 16 16">
-                    <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278zM4.858 1.311A7.269 7.269 0 0 0 1.025 7.71c0 4.02 3.279 7.276 7.319 7.276a7.316 7.316 0 0 0 5.205-2.162c-.337.042-.68.063-1.029.063-4.61 0-8.343-3.714-8.343-8.29 0-1.167.242-2.278.681-3.286z"/>
-                    <path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"/>
+  <canvas id="starfield" aria-hidden="true"></canvas>
+
+  <header class="site-header">
+    <a href="#main-content" class="skip-link visually-hidden">Skip to main content</a>
+    <nav class="navbar navbar-expand-lg fixed-top" aria-label="Primary">
+      <div class="container-fluid px-lg-4">
+        <a class="navbar-brand" href="#">ZB // NOT ZEKE</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
+              <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+            </svg>
+          </span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
+            <a class="nav-link" href="#leadership">ABC Insights</a>
+            <a class="nav-link" href="#transformation">Agentic AI</a>
+            <a class="nav-link" href="#ventures">Ventures</a>
+            <a class="nav-link" href="#sandbox">Playground</a>
+            <a class="nav-link" href="fun.html">/fun</a>
+            <a class="nav-link" href="#contact">Contact</a>
+            <div class="nav-controls mt-2 mt-lg-0 ms-lg-2">
+              <button id="motion-toggle" class="icon-toggle" type="button" aria-label="Pause starfield animation">Pause Stars</button>
+              <button id="theme-toggle" class="icon-toggle" type="button">
+                <span class="theme-state-for-dark">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
+                    <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8M8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0m0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13m8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5M3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8m10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0m-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0m9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707M4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708"/>
                   </svg>
-                </button>
-              </div>
+                  <span>Light<span class="visually-hidden"> theme</span></span>
+                </span>
+                <span class="theme-state-for-light">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
+                    <path d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277q.792-.001 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278"/>
+                  </svg>
+                  <span>Dark<span class="visually-hidden"> theme</span></span>
+                </span>
+              </button>
             </div>
           </div>
-        </nav>
+        </div>
+      </div>
+    </nav>
   </header>
 
-  <main class="container">
+  <main id="main-content" class="container" tabindex="-1">
+    <!-- Hero -->
     <section class="hero-section">
-      <h1 class="hero-title">Zeke Brustkern</h1>
-      <p class="hero-subtitle">Director of Product Management for Data, AI, and Reporting.</p>
-      <p class="text-secondary" style="max-width: 600px; margin: 0 auto;">Bridging the gap between deeply technical engineering teams and high-level business strategy to design scalable, data-driven architectures that deliver real value.</p>
+      <div class="row align-items-center g-4 g-lg-5">
+        <div class="col-lg-7">
+          <span class="eyebrow">Director of Product · Data, AI &amp; Builder</span>
+          <h1 class="hero-title">Zeke Brustkern<span class="hero-accent">.</span></h1>
+          <p class="hero-subtitle">
+            Serious about enterprise data architecture, governance, and leading agentic software development transformation. Playful enough to build and ship real products on the side because the best product leaders stay close to the metal.
+          </p>
+          <ul class="proof-chips">
+            <li class="proof-chip"><strong>ABC Fitness</strong> · Director of Product (Data, AI &amp; Reporting)</li>
+            <li class="proof-chip"><strong>Diffusion.io</strong> · Agentic Bootcamp &amp; Internal Enablement</li>
+            <li class="proof-chip"><strong>Solopreneur</strong> · DocketStamp &amp; SendMyNotes</li>
+          </ul>
+          <div class="hero-actions">
+            <a href="#leadership" class="btn-signal">Explore Leadership &amp; Builds</a>
+            <a href="#ventures" class="btn-outline-cyan">See Shipped Ventures</a>
+            <a href="#contact" class="btn-outline-cyan">Get in Touch</a>
+          </div>
+        </div>
+        <div class="col-lg-5">
+          <figure class="hero-frame mb-0">
+            <img src="assets/postcard.png" alt="Retro space postcard illustration reading Not Zeke with a rocket launching through deep space">
+            <figcaption class="hero-frame-caption">
+              <span>Enterprise Strategist &amp; Hands-On Builder</span>
+              <span>notZeke.com</span>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
     </section>
 
-    <section id="featured">
-      <h2 class="section-title">Executive Leadership: ABC Insights</h2>
-      <p class="text-secondary mb-4">Driving the strategic vision and technical execution for enterprise-scale data warehousing, AI enablement, and unified reporting platforms.</p>
-      
+    <!-- Enterprise Leadership -->
+    <section id="leadership" aria-labelledby="leadership-heading">
+      <div id="featured" class="section-header">
+        <span class="section-kicker">Enterprise Product Leadership</span>
+        <h2 id="leadership-heading" class="section-title">ABC Fitness · ABC Ignite Insights</h2>
+        <p class="section-lead">Driving product vision, architecture alignment, and team execution for enterprise-scale data warehousing, governed BI, and AI enablement.</p>
+      </div>
+
       <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
-        
-        <!-- Dimensional Modeling -->
         <div class="col">
-          <div class="card h-100">
-            <img src="assets/abc-dimensional.png" class="card-img-top" alt="Dimensional Modeling representation">
+          <article class="card">
+            <img src="assets/abc-dimensional.png" class="card-img-top" alt="Dimensional data warehouse cube architecture diagram">
             <div class="card-body">
-                <h5 class="card-title">Dimensional Data Modeling Overhaul</h5>
-                <p class="card-text">Led a complete ground-up restructuring of dimensional models based on Kimball first principles, ensuring 100% reliable, consistent, accurate, and timely data delivery across the enterprise.</p>
-                <div class="badges mt-auto">
-                  <span class="badge text-bg-secondary text-light bg-opacity-25 border border-secondary">Data Modeling</span>
-                  <span class="badge text-bg-secondary text-light bg-opacity-25 border border-secondary">Kimball</span>
-                </div>
-                <a href="https://ignite.abcfitness.com/gym-management-software/insights/" class="stretched-link" aria-label="View ABC Insights"></a>
+              <h3 class="card-title">Dimensional Data Foundations</h3>
+              <p class="card-text">Led a ground-up restructuring of core dimensional models around Kimball first principles to deliver consistent, trustworthy, and timely analytics across enterprise club operations.</p>
+              <div class="card-meta-tags">
+                <span class="tag-pill">Data Modeling</span>
+                <span class="tag-pill">Kimball</span>
+              </div>
+              <div class="card-link-row">
+                <a href="https://ignite.abcfitness.com/gym-management-software/insights/" class="card-action-link" target="_blank" rel="noopener noreferrer">Explore ABC Ignite Insights &#8599;</a>
+              </div>
             </div>
-          </div>
+          </article>
         </div>
 
-        <!-- Enterprise Governance -->
         <div class="col">
-          <div class="card h-100">
-            <img src="https://abcfitness.com/wp-content/uploads/1200x600-v1-scaled.jpg" class="card-img-top" alt="Data Governance representation">
+          <article class="card">
+            <img src="assets/abc-governance.png" class="card-img-top" alt="Enterprise AI enablement and data governance hub illustration">
             <div class="card-body">
-                <h5 class="card-title">Enterprise Scale Data Governance</h5>
-                <p class="card-text">Rethought data governance and stewardship to establish company-wide governed definitions of core KPIs. Powered high-quality reporting and enabled scalable AI tooling through harnessed metric views.</p>
-                <div class="badges mt-auto">
-                  <span class="badge text-bg-secondary text-light bg-opacity-25 border border-secondary">AI Enablement</span>
-                  <span class="badge text-bg-secondary text-light bg-opacity-25 border border-secondary">Governance</span>
-                </div>
-                <a href="https://abcfitness.com/webinars/ai-innovation/" class="stretched-link" aria-label="View AI Innovation Webinar"></a>
+              <h3 class="card-title">Enterprise Governance &amp; AI Enablement</h3>
+              <p class="card-text">Reframed data governance and stewardship around company-wide governed KPI definitions and metric views—powering unified reporting and creating clean semantic foundations for AI tooling.</p>
+              <div class="card-meta-tags">
+                <span class="tag-pill tag-pill-orange">AI Enablement</span>
+                <span class="tag-pill">Governance</span>
+              </div>
+              <div class="card-link-row">
+                <a href="https://abcfitness.com/webinars/ai-innovation/" class="card-action-link" target="_blank" rel="noopener noreferrer">View AI Innovation Webinar &#8599;</a>
+              </div>
             </div>
-          </div>
+          </article>
         </div>
 
-        <!-- Cloud Modernization -->
         <div class="col">
-          <div class="card h-100">
-            <img src="https://ignite.abcfitness.com/wp-content/uploads/2024/05/abc-ignite-featured.png" class="card-img-top" alt="Cloud Migration representation">
+          <article class="card">
+            <img src="assets/abc-migration.png" class="card-img-top" alt="Legacy on-premise database servers migrating to Databricks cloud lakehouse">
             <div class="card-body">
-                <h5 class="card-title">Cloud Modernization Strategy</h5>
-                <p class="card-text">Spearheaded the transition from legacy technology platforms (IBM iSeries DB2, Oracle, MySQL) to modern cloud-native architectures (AWS Databricks), overcoming immense platform limitations.</p>
-                <div class="badges mt-auto">
-                  <span class="badge text-bg-secondary text-light bg-opacity-25 border border-secondary">AWS Databricks</span>
-                  <span class="badge text-bg-secondary text-light bg-opacity-25 border border-secondary">Migration</span>
-                </div>
-                <a href="https://ignite.abcfitness.com/" class="stretched-link" aria-label="View ABC Ignite"></a>
+              <h3 class="card-title">Cloud Modernization Strategy</h3>
+              <p class="card-text">Spearheaded the product roadmap transitioning legacy platforms (IBM iSeries DB2, Oracle, MySQL) onto cloud-native AWS and Databricks lakehouse architectures.</p>
+              <div class="card-meta-tags">
+                <span class="tag-pill">AWS Databricks</span>
+                <span class="tag-pill">Modernization</span>
+              </div>
+              <div class="card-link-row">
+                <a href="https://ignite.abcfitness.com/" class="card-action-link" target="_blank" rel="noopener noreferrer">View ABC Ignite Platform &#8599;</a>
+              </div>
             </div>
-          </div>
+          </article>
         </div>
-
       </div>
-    </section>
 
-    <section id="sandbox" class="mt-5 pt-4">
-      <h2 class="section-title">Technical Playground</h2>
-      <p class="text-secondary mb-4">I believe the best product leaders stay close to the metal. Here are some personal engineering projects and experiments I've built to explore new technologies.</p>
-      
-      <div class="row row-cols-1 row-cols-md-3 row-cols-lg-3 g-4">
-        <!-- Not Zeke Academy -->
-        <div class="col">
-          <div class="card shadow-sm h-100">
-            <img src="assets/nza-thumbnail.png" class="card-img-top" alt="Not Zeke Academy thumbnail">
-            <div class="card-body">
-                <h5 class="card-title fs-6">not Zeke Academy</h5>
-                <p class="card-text small">A dynamic, AI-powered learning platform designed to help learners build and customize curricula for their unique needs with learner-aware reactive pedagogy.</p>
-                <div class="badges mt-auto">
-                  <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React Badge"> 
-                  <img src="https://img.shields.io/badge/Firebase-FFCA28?style=for-the-badge&logo=firebase&logoColor=black" alt="Firebase Badge">
-                </div>
-                <a href="https://github.com/zbrustkern/snipIt" class="stretched-link" aria-label="View Not Zeke Academy"></a>
-            </div>
+      <!-- Public Shipped Proof -->
+      <div class="callout-panel mt-4">
+        <div class="row align-items-center g-3">
+          <div class="col-lg-8">
+            <h3>Public Release Log: Shipped Insights Capabilities</h3>
+            <p>Public product updates from ABC Ignite Insights reflect the focus on financial rigor, data consistency, and operator visibility:</p>
+            <ul class="shipped-highlights">
+              <li>Financial Data Mart (FDM) &amp; Ledger Organization</li>
+              <li>Accrual Accounting Views</li>
+              <li>Collections &amp; DRDR Variance Analysis</li>
+              <li>Canadian Tax Statements</li>
+              <li>Member Analysis &amp; Active-Count Alignment</li>
+            </ul>
           </div>
-        </div>
-
-        <!-- Tophat Financial -->
-        <div class="col">
-          <div class="card shadow-sm h-100">
-              <img src="assets/tophat_financial.jpg" class="card-img-top" alt="Logo for Tophat Financial">
-              <div class="card-body">
-                  <h5 class="card-title fs-6">Tophat Financial</h5>
-                  <p class="card-text small">Build a financial plan for your future. Uses advanced modeling to estimate your future cash flow given your income, savings, and expected return.</p>
-                  <div class="badges mt-auto">
-                    <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React Badge"> 
-                    <img src="https://img.shields.io/badge/Google_Cloud-4285F4?style=for-the-badge&logo=google-cloud&logoColor=white" alt="Google Cloud Badge">
-                  </div>
-                  <a href="https://planner-cac2a.web.app/" class="stretched-link" aria-label="View Tophat Financial"></a>
-              </div>
-          </div>
-        </div>
-
-        <!-- WeatherWise -->
-        <div class="col">
-          <div class="card shadow-sm h-100">
-            <img src="assets/weatherwise-screenshot.png" class="card-img-top" alt="A screenshot of disaster preparedness app">
-            <div class="card-body">
-                <h5 class="card-title fs-6">WeatherWise</h5>
-                <p class="card-text small">Envirobuild 2024 Hackathon Winner. Provides disaster preparedness information localized to the user with actionable insights for geological emergencies.</p>
-                <div class="badges mt-auto">
-                  <img src="https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white" alt="Nextjs Badge">
-                </div>
-                <a href="https://water-wars-psi.vercel.app" class="stretched-link" aria-label="View WeatherWise"></a>
-              </div>
+          <div class="col-lg-4 text-lg-end">
+            <a href="https://abcfitness.com/product-updates/?product=abc-ignite&quarter=all&area=insights&keyword=" class="btn-signal" target="_blank" rel="noopener noreferrer">Read ABC Insights Updates &#8599;</a>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="contact" class="mt-5 pt-5 border-top border-secondary">
-        <div class="row text-center mb-5">
-            <div class="col-md-4 mb-3">
-                <a href="mailto:info@notzeke.com" class="text-decoration-none">
-                    <h5 style="color: var(--accent-primary)">Contact Me</h5>
-                    <p class="text-secondary">info@notzeke.com</p>
-                </a>
-            </div>
-            <div class="col-md-4 mb-3">
-                <a href="https://linkedin.com/in/zekebrustkern" class="text-decoration-none">
-                    <h5 style="color: var(--accent-primary)">LinkedIn</h5>
-                    <p class="text-secondary">Professional Networking</p>
-                </a>
-            </div>
-            <div class="col-md-4 mb-3">
-                <a href="https://github.com/zbrustkern" class="text-decoration-none">
-                    <h5 style="color: var(--accent-primary)">GitHub</h5>
-                    <p class="text-secondary">Technical Portfolio</p>
-                </a>
-            </div>
+    <!-- Agentic Transformation -->
+    <section id="transformation" aria-labelledby="transformation-heading">
+      <div class="section-header">
+        <span class="section-kicker">AI Adoption &amp; Team Enablement</span>
+        <h2 id="transformation-heading" class="section-title">Leading Agentic Software Development Transformation</h2>
+        <p class="section-lead">
+          After completing the <a href="https://diffusion.io" target="_blank" rel="noopener noreferrer" class="card-action-link d-inline">Diffusion.io &#8599;</a> agentic development boot camp, I am actively teaching teams across ABC how to adopt structured agentic workflows—moving beyond ad-hoc chat prompts to disciplined software factories.
+        </p>
+      </div>
+
+      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-3">
+        <div class="col">
+          <div class="playbook-step">
+            <span class="step-num">01 // INTENT</span>
+            <h3>Sharp Specs &amp; Guardrails</h3>
+            <p>Product leadership defines crisp business outcomes, constraints, and acceptance gates before any agent touches code.</p>
+          </div>
         </div>
+        <div class="col">
+          <div class="playbook-step">
+            <span class="step-num">02 // DELEGATE</span>
+            <h3>Scoped Agent Execution</h3>
+            <p>Break complex features into bounded tasks where coding agents operate with clear ownership and minimal context bloat.</p>
+          </div>
+        </div>
+        <div class="col">
+          <div class="playbook-step">
+            <span class="step-num">03 // VERIFY</span>
+            <h3>Critique &amp; Deterministic Checks</h3>
+            <p>Pair agentic speed with independent review, behavioral verification, and human accountability on architecture and UX.</p>
+          </div>
+        </div>
+        <div class="col">
+          <div class="playbook-step">
+            <span class="step-num">04 // MULTIPLY</span>
+            <h3>Org-Wide Enablement</h3>
+            <p>Coach product managers and engineers to internalize repeatable agentic patterns—turning AI curiosity into daily delivery leverage.</p>
+          </div>
+        </div>
+      </div>
     </section>
 
+    <!-- Solopreneurship & Shipped Ventures -->
+    <section id="ventures" aria-labelledby="ventures-heading">
+      <div class="section-header">
+        <span class="section-kicker">Solopreneurship · Built &amp; Shipped End-to-End</span>
+        <h2 id="ventures-heading" class="section-title">Live Products I Built</h2>
+        <p class="section-lead">I test my own AI and product frameworks in the wild—taking ideas from zero to live production, payments, and physical-world fulfillment.</p>
+      </div>
+
+      <div class="row row-cols-1 row-cols-lg-2 g-4">
+        <div class="col">
+          <article class="card">
+            <img src="assets/docketstamp-preview.svg" class="card-img-top" alt="DocketStamp deterministic document preparation and USPS certified mail pipeline schematic">
+            <div class="card-body">
+              <h3 class="card-title">DocketStamp</h3>
+              <p class="card-text">Automated self-help document preparation and USPS mailing utility. Supports First-Class, Certified Mail&#174;, and Electronic Return Receipt with CASS-verified addressing, pre-payment document locking, and strict non-legal-advice boundaries.</p>
+              <div class="card-meta-tags">
+                <span class="tag-pill tag-pill-orange">Solopreneur</span>
+                <span class="tag-pill">Document Ops</span>
+                <span class="tag-pill">USPS Certified Mail</span>
+              </div>
+              <div class="card-link-row">
+                <a href="https://docketstamp.com" class="btn-signal" target="_blank" rel="noopener noreferrer">Visit docketstamp.com &#8599;</a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="col">
+          <article class="card">
+            <img src="assets/sendmynotes-preview.svg" class="card-img-top" alt="SendMyNotes and Aster and Blanche Press real pen-on-paper handwritten card illustration">
+            <div class="card-body">
+              <h3 class="card-title">SendMyNotes · Aster &amp; Blanche Press</h3>
+              <p class="card-text">Digital commission studio turning online messages into real pen-on-paper handwritten greeting cards on 120 lb archival cardstock, stamped and dispatched via USPS—combining software convenience with tactile craft.</p>
+              <div class="card-meta-tags">
+                <span class="tag-pill tag-pill-orange">Solopreneur</span>
+                <span class="tag-pill">Physical-Digital Ops</span>
+                <span class="tag-pill">Consumer UX</span>
+              </div>
+              <div class="card-link-row">
+                <a href="https://sendmynotes.com" class="btn-signal" target="_blank" rel="noopener noreferrer">Visit sendmynotes.com &#8599;</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Technical Playground -->
+    <section id="sandbox" aria-labelledby="sandbox-heading">
+      <div class="section-header">
+        <span class="section-kicker">Builder Range &amp; Experiments</span>
+        <h2 id="sandbox-heading" class="section-title">Technical Playground</h2>
+        <p class="section-lead">Quantitative modeling, hackathon wins, and AI learning tools—proof of hands-on fluency without losing sight of the day job.</p>
+      </div>
+
+      <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="col">
+          <article class="card">
+            <img src="assets/tophat_financial.jpg" class="card-img-top" alt="Tophat Financial logo">
+            <div class="card-body">
+              <h3 class="card-title">Tophat Financial</h3>
+              <p class="card-text">Quantitative personal cash-flow and retirement modeling engine estimating future financial trajectories from income, savings rate, and expected return assumptions.</p>
+              <div class="card-meta-tags">
+                <span class="tag-pill">React</span>
+                <span class="tag-pill">TypeScript</span>
+                <span class="tag-pill">Google Cloud</span>
+              </div>
+              <div class="card-link-row">
+                <a href="https://planner-cac2a.web.app/" class="card-action-link" target="_blank" rel="noopener noreferrer">Launch Tophat Financial &#8599;</a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="col">
+          <article class="card">
+            <img src="assets/weatherwise-screenshot.png" class="card-img-top" alt="WeatherWise disaster preparedness web app screenshot">
+            <div class="card-body">
+              <h3 class="card-title">WeatherWise</h3>
+              <p class="card-text">Envirobuild 2024 Hackathon Winner. Delivers localized disaster preparedness playbooks and actionable guidance for geological emergencies.</p>
+              <div class="card-meta-tags">
+                <span class="tag-pill tag-pill-orange">Hackathon Winner</span>
+                <span class="tag-pill">Next.js</span>
+                <span class="tag-pill">PostgreSQL</span>
+              </div>
+              <div class="card-link-row">
+                <a href="https://water-wars-psi.vercel.app" class="card-action-link" target="_blank" rel="noopener noreferrer">Open WeatherWise &#8599;</a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="col">
+          <article class="card">
+            <img src="assets/nza-thumbnail.png" class="card-img-top" alt="Not Zeke Academy AI-powered learning platform graphic">
+            <div class="card-body">
+              <h3 class="card-title">not Zeke Academy</h3>
+              <p class="card-text">AI-powered adaptive learning platform exploring learner-aware reactive pedagogy and dynamically tailored curricula.</p>
+              <div class="card-meta-tags">
+                <span class="tag-pill">React</span>
+                <span class="tag-pill">Firebase</span>
+                <span class="tag-pill">AI Pedagogy</span>
+              </div>
+              <div class="card-link-row">
+                <a href="https://github.com/zbrustkern/snipIt" class="card-action-link" target="_blank" rel="noopener noreferrer">View Source on GitHub &#8599;</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <div class="fun-banner mt-4">
+        <div class="row align-items-center g-3">
+          <div class="col-md-8">
+            <h3>Want the unfiltered retro lab?</h3>
+            <p>Visit <strong class="hero-accent">/fun</strong> for earlier builds and games—including Qubic (3D Tic-Tac-Toe), MoarSquare, The Wrench Collective, LifTracker, and Checkers.</p>
+          </div>
+          <div class="col-md-4 text-md-end">
+            <a href="fun.html" class="btn-outline-cyan">Enter /fun Lab &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" aria-labelledby="contact-heading">
+      <div class="section-header">
+        <span class="section-kicker">Connect</span>
+        <h2 id="contact-heading" class="section-title">Let's Build Something Significant</h2>
+        <p class="section-lead">Open to conversations around Product Leadership, Enterprise Data &amp; AI Platforms, and Agentic Transformation.</p>
+      </div>
+
+      <div class="row g-3 mb-4">
+        <div class="col-md-4">
+          <a href="mailto:info@notzeke.com" class="contact-card">
+            <h3>Email</h3>
+            <p>info@notzeke.com</p>
+          </a>
+        </div>
+        <div class="col-md-4">
+          <a href="https://linkedin.com/in/zekebrustkern" class="contact-card" target="_blank" rel="noopener noreferrer">
+            <h3>LinkedIn</h3>
+            <p>linkedin.com/in/zekebrustkern</p>
+          </a>
+        </div>
+        <div class="col-md-4">
+          <a href="https://github.com/zbrustkern" class="contact-card" target="_blank" rel="noopener noreferrer">
+            <h3>GitHub</h3>
+            <p>github.com/zbrustkern</p>
+          </a>
+        </div>
+      </div>
+    </section>
   </main>
+
+  <footer class="site-footer">
+    <div class="container py-0 d-flex flex-column flex-sm-row justify-content-between align-items-sm-center gap-2">
+      <span>Zeke Brustkern · Data, AI &amp; Product Leadership</span>
+      <span>If they ask who, it's <a href="fun.html" class="card-action-link d-inline">notZeke</a>.</span>
+    </div>
+  </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
