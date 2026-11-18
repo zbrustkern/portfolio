@@ -60,7 +60,7 @@
       <circle cx="14" cy="26" r="2.5" fill="#7dd3fc"/>
     </g>
 
-    <text x="28" y="260" font-family="ui-monospace, monospace" font-size="10" fill="#64748b">REAL PEN &amp; INK · 120 LB ARCHIVAL A2</text>
+    <text x="28" y="260" font-family="ui-monospace, monospace" font-size="10" fill="#64748b">REAL PEN &amp; INK · CUSTOM CARD</text>
   </g>
 
   <g transform="translate(465, 370)" font-family="ui-monospace, monospace" font-size="11">
@@ -68,6 +68,6 @@
     <text x="64" y="19" text-anchor="middle" fill="#fbbf24">REAL PEN INK</text>
 
     <rect x="140" width="135" height="30" rx="15" fill="#0f172a" stroke="#7dd3fc" stroke-opacity="0.35"/>
-    <text x="207" y="19" text-anchor="middle" fill="#7dd3fc">24H DISPATCH</text>
+    <text x="207" y="19" text-anchor="middle" fill="#7dd3fc">MAILED FOR YOU</text>
   </g>
 </svg>

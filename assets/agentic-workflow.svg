@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" role="img" aria-label="Agentic Software Development four-stage workflow: Spec First, Bounded Slices, Verify, Enable Teams">
+  <defs>
+    <linearGradient id="ag-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#070b14"/>
+      <stop offset="55%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#0b1222"/>
+    </linearGradient>
+    <pattern id="ag-grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M 32 0 L 0 0 0 32" fill="none" stroke="#7dd3fc" stroke-opacity="0.06" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <rect width="800" height="450" fill="url(#ag-bg)"/>
+  <rect width="800" height="450" fill="url(#ag-grid)"/>
+
+  <circle cx="200" cy="235" r="155" fill="#7dd3fc" fill-opacity="0.06"/>
+  <circle cx="600" cy="225" r="155" fill="#f59e0b" fill-opacity="0.06"/>
+
+  <text x="56" y="54" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="13" fill="#7dd3fc" letter-spacing="1.5">AGENTIC DELIVERY PIPELINE</text>
+  <text x="744" y="54" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="12" fill="#f59e0b" letter-spacing="1">DIFFUSION.IO</text>
+  <line x1="56" y1="68" x2="744" y2="68" stroke="#94a3b8" stroke-opacity="0.22" stroke-width="1"/>
+
+  <!-- Connector rail -->
+  <line x1="140" y1="225" x2="660" y2="225" stroke="#7dd3fc" stroke-opacity="0.32" stroke-width="2" stroke-dasharray="6 6"/>
+
+  <!-- Node 01: Spec First -->
+  <g transform="translate(56, 128)">
+    <rect width="154" height="196" rx="14" fill="#0f172a" stroke="#7dd3fc" stroke-opacity="0.38" stroke-width="1.5"/>
+    <circle cx="34" cy="34" r="14" fill="#f59e0b" fill-opacity="0.16" stroke="#f59e0b" stroke-opacity="0.6" stroke-width="1.2"/>
+    <text x="34" y="39" text-anchor="middle" font-family="ui-monospace, monospace" font-size="12" font-weight="700" fill="#fbbf24">01</text>
+    <text x="18" y="78" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="700" fill="#f1f5f9">Spec First</text>
+    <rect x="18" y="96" width="114" height="6" rx="3" fill="#7dd3fc" fill-opacity="0.45"/>
+    <rect x="18" y="112" width="96" height="6" rx="3" fill="#94a3b8" fill-opacity="0.35"/>
+    <rect x="18" y="128" width="108" height="6" rx="3" fill="#94a3b8" fill-opacity="0.35"/>
+    <rect x="18" y="156" width="76" height="22" rx="11" fill="#1e293b" stroke="#7dd3fc" stroke-opacity="0.25"/>
+    <text x="56" y="171" text-anchor="middle" font-family="ui-monospace, monospace" font-size="10" fill="#7dd3fc">INTENT</text>
+  </g>
+
+  <!-- Node 02: Bounded Slices -->
+  <g transform="translate(234, 128)">
+    <rect width="154" height="196" rx="14" fill="#0f172a" stroke="#7dd3fc" stroke-opacity="0.38" stroke-width="1.5"/>
+    <circle cx="34" cy="34" r="14" fill="#f59e0b" fill-opacity="0.16" stroke="#f59e0b" stroke-opacity="0.6" stroke-width="1.2"/>
+    <text x="34" y="39" text-anchor="middle" font-family="ui-monospace, monospace" font-size="12" font-weight="700" fill="#fbbf24">02</text>
+    <text x="18" y="78" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="700" fill="#f1f5f9">Bounded</text>
+    <rect x="18" y="96" width="118" height="18" rx="5" fill="#1e293b" stroke="#94a3b8" stroke-opacity="0.25"/>
+    <rect x="18" y="120" width="118" height="18" rx="5" fill="#1e293b" stroke="#94a3b8" stroke-opacity="0.25"/>
+    <rect x="18" y="156" width="76" height="22" rx="11" fill="#1e293b" stroke="#7dd3fc" stroke-opacity="0.25"/>
+    <text x="56" y="171" text-anchor="middle" font-family="ui-monospace, monospace" font-size="10" fill="#7dd3fc">SLICES</text>
+  </g>
+
+  <!-- Node 03: Verify -->
+  <g transform="translate(412, 128)">
+    <rect width="154" height="196" rx="14" fill="#0f172a" stroke="#7dd3fc" stroke-opacity="0.38" stroke-width="1.5"/>
+    <circle cx="34" cy="34" r="14" fill="#f59e0b" fill-opacity="0.16" stroke="#f59e0b" stroke-opacity="0.6" stroke-width="1.2"/>
+    <text x="34" y="39" text-anchor="middle" font-family="ui-monospace, monospace" font-size="12" font-weight="700" fill="#fbbf24">03</text>
+    <text x="18" y="78" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="700" fill="#f1f5f9">Verify</text>
+    <path d="M 22 114 L 30 122 L 44 104" fill="none" stroke="#34d399" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="54" y="110" width="80" height="6" rx="3" fill="#e2e8f0" fill-opacity="0.5"/>
+    <path d="M 22 134 L 30 142 L 44 124" fill="none" stroke="#34d399" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="54" y="130" width="68" height="6" rx="3" fill="#94a3b8" fill-opacity="0.4"/>
+    <rect x="18" y="156" width="76" height="22" rx="11" fill="#1e293b" stroke="#7dd3fc" stroke-opacity="0.25"/>
+    <text x="56" y="171" text-anchor="middle" font-family="ui-monospace, monospace" font-size="10" fill="#7dd3fc">CHECKS</text>
+  </g>
+
+  <!-- Node 04: Enable Teams -->
+  <g transform="translate(590, 128)">
+    <rect width="154" height="196" rx="14" fill="#0f172a" stroke="#f59e0b" stroke-opacity="0.45" stroke-width="1.5"/>
+    <circle cx="34" cy="34" r="14" fill="#f59e0b" fill-opacity="0.2" stroke="#f59e0b" stroke-opacity="0.7" stroke-width="1.2"/>
+    <text x="34" y="39" text-anchor="middle" font-family="ui-monospace, monospace" font-size="12" font-weight="700" fill="#fbbf24">04</text>
+    <text x="18" y="78" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="700" fill="#f1f5f9">Enable</text>
+    <circle cx="34" cy="116" r="10" fill="#7dd3fc" fill-opacity="0.25" stroke="#7dd3fc" stroke-opacity="0.6"/>
+    <circle cx="64" cy="116" r="10" fill="#7dd3fc" fill-opacity="0.25" stroke="#7dd3fc" stroke-opacity="0.6"/>
+    <circle cx="94" cy="116" r="10" fill="#f59e0b" fill-opacity="0.25" stroke="#f59e0b" stroke-opacity="0.6"/>
+    <rect x="18" y="156" width="88" height="22" rx="11" fill="#1e293b" stroke="#f59e0b" stroke-opacity="0.35"/>
+    <text x="62" y="171" text-anchor="middle" font-family="ui-monospace, monospace" font-size="10" fill="#fbbf24">ABC TEAMS</text>
+  </g>
+
+  <text x="56" y="396" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="12" fill="#94a3b8">SPEC-DRIVEN DELIVERY · ADVERSARIAL REVIEW · TEAM ADOPTION</text>
+</svg>
