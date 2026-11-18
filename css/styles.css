@@ -148,6 +148,7 @@ main.container {
 }
 
 section[id],
+article[id],
 #featured,
 #sandbox {
   scroll-margin-top: 5.25rem;
@@ -335,10 +336,45 @@ section[id],
 
 .card-img-top {
   width: 100%;
-  aspect-ratio: 16 / 9;
+  aspect-ratio: 16 / 10;
   object-fit: cover;
   border-bottom: 1px solid var(--card-border);
   display: block;
+}
+
+.card-img-portrait {
+  object-position: center 18%;
+}
+
+.card-featured {
+  border-color: rgba(125, 211, 252, 0.3);
+}
+
+.card-kicker {
+  display: block;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--accent-warm);
+  margin-bottom: 0.3rem;
+}
+
+.card-links-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  margin-top: auto;
+  padding-top: 0.25rem;
+  border-top: 1px solid var(--card-border);
+}
+
+.card-links-inline {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: auto;
 }
 
 .card-body {
