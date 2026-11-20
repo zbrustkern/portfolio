@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="dark">
+  <title>Chief AI Antagonist: Why Gold Isn't Enough for AI | Field Notes — Zeke Brustkern</title>
+  <meta name="description" content="95% accuracy doesn't cut it for closing your books. Before an LLM can answer questions about your business, you need a deterministic metrics layer underneath it.">
+  <link rel="canonical" href="https://notzeke.com/notes/chief-ai-antagonist.html">
+  <link rel="icon" type="image/jpeg" href="../assets/thumbnail.jpeg">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Chief AI Antagonist: Why Gold Isn't Enough for AI | Zeke Brustkern">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://notzeke.com/notes/chief-ai-antagonist.html">
+  <meta property="og:image" content="https://notzeke.com/assets/zeke-headshot.jpg">
+  <meta property="og:description" content="95% accuracy doesn't cut it for closing your books. Before an LLM can answer questions about your business, you need a deterministic metrics layer underneath it.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Chief AI Antagonist: Why Gold Isn't Enough for AI | Zeke Brustkern">
+  <meta name="twitter:description" content="95% accuracy doesn't cut it for closing your books. Before an LLM can answer questions about your business, you need a deterministic metrics layer underneath it.">
+  <meta name="twitter:image" content="https://notzeke.com/assets/zeke-headshot.jpg">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../css/editorial.css?v=20261118c">
+  <script defer src="../js/editorial.js?v=20261118b"></script>
+</head>
+<body>
+  <canvas id="starfield" aria-hidden="true"></canvas>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="../index.html">Zeke<span>.</span></a>
+      <nav class="site-nav" aria-label="Primary">
+        <a href="../index.html#work">Work</a>
+        <a href="../index.html#agentic">Agentic</a>
+        <a href="../index.html#builds">Builds</a>
+        <a href="../index.html#notes">Notes</a>
+        <a href="../index.html#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content" class="shell" tabindex="-1">
+    <article class="note-article">
+      <a class="back-link" href="../index.html#notes">← Back to Field Notes</a>
+
+      <header class="note-header">
+        <p class="eyebrow"><time datetime="2026-11-19">Nov 19, 2026</time> · 2 min read</p>
+        <h1>Chief AI Antagonist: Why Gold Isn't Enough for AI</h1>
+        <p class="note-dek">95% accuracy doesn't cut it for closing your books. Before an LLM can answer questions about your business, you need a deterministic metrics layer underneath it.</p>
+      </header>
+
+      <div class="note-body prose">
+        <p>In an era of agentic everything, I often find myself assuming the title "Chief AI Antagonist." I've nayed several "talk to your data" natural-language query engines. It's not that I don't want to offer this—I would like nothing more than to build cool AI features on top of our data, internal and external, answering simple questions like <em>"What was our revenue last month?"</em></p>
+
+        <p>What I can't have is that question yielding a different answer than <em>"What was our TOTAL revenue last month?"</em>—or giving the same answer to <em>"What was our gross revenue?"</em> and <em>"What was our net revenue?"</em></p>
+
+        <p>We've all gotten used to the medallion architecture: bronze, silver, and gold layers. But that misses a key component required to build a reliable harness. We need another layer. People talk about platinum queries, but we need a platinum layer—a consumption layer, a semantic layer, a metrics layer. Call it whatever you want, but you need to define—deterministically—the things the agent answers, and then let the LLM pick and choose what to do with the puzzle pieces.</p>
+
+        <p>Proper data architecture is becoming table stakes, but adding this layer infused with business logic—driving consistency not just across reports, but across semantic terms—is non-negotiable. Everyone wants to talk to an agent and make dashboards and reports obsolete, yet we still need traceability, SQL inspection, and verifiability baked in. 95% doesn't cut it for closing your books.</p>
+
+        <p>Building out this metrics layer is the unlock not just for AI, but for true insights. Once you've modeled the ontology of where your business data comes from, you can pull the levers that actually drive change—creating ML models that surface real insight across a population and translate into clear signals for individual accounts. <strong>That</strong> is what drives customer value.</p>
+      </div>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <span>Zeke Brustkern · <a class="text-link" href="../fun.html">/fun</a></span>
+      <button id="motion-toggle" class="motion-btn" type="button" aria-pressed="false">Pause starfield</button>
+    </div>
+  </footer>
+</body>
+</html>
